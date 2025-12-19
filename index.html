@@ -25,6 +25,7 @@
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     /* GOLD ENTER BUTTON */
@@ -35,6 +36,40 @@
 
       padding: 18px 56px;
       font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-decoration: none;
+
+      color: #000;
+      background: linear-gradient(
+        135deg,
+        #d4af37,
+        #f6e27a,
+        #d4af37
+      );
+
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(212,175,55,0.5);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .enter-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 16px 44px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="home.html" class="enter-btn">ENTER</a>
+
+</body>
+</html>      font-size: 18px;
       font-weight: 600;
       letter-spacing: 2px;
       text-decoration: none;
