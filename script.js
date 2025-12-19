@@ -1,40 +1,22 @@
-/* =========================
-   RIGHT SIDE MENU
-========================= */
-
-function openMenu() {
-  const menu = document.getElementById("menu");
-  if (menu) {
-    menu.style.right = "0";
-  }
+function openMenu(){
+  document.getElementById("menu").classList.add("show");
+}
+function closeMenu(){
+  document.getElementById("menu").classList.remove("show");
 }
 
-function closeMenu() {
-  const menu = document.getElementById("menu");
-  if (menu) {
-    menu.style.right = "-300px";
-  }
-}
+/* Header show after scroll */
+window.addEventListener("scroll",()=>{
+  const header=document.querySelector(".header");
+  if(window.scrollY>80){header.classList.add("show")}
+  else{header.classList.remove("show")}
+});
 
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-  const reveals = document.querySelectorAll(".reveal");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
+/* Scroll reveal */
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"))
+},{threshold:.15});
+document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));  );
 
   reveals.forEach((el) => observer.observe(el));
 });
