@@ -1,73 +1,120 @@
-/* =========================
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#f5f5f7;
+  color:#1d1d1f;
 }
 
-/* =========================
-   BASE
-========================= */
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f5f5f7;     /* Apple light background */
-  color: #1d1d1f;          /* Apple dark text */
+/* ENTER PAGE */
+.intro-screen{
+  position:relative;
+  height:100vh;
+  background-size:cover;
+  background-position:center;
 }
 
-/* =========================
-   INTRO / ENTER PAGE
-========================= */
-.intro-screen {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.gold-btn{
+  position:absolute;
+  right:64px;
+  bottom:64px;
+  padding:20px 72px;
+  font-weight:600;
+  letter-spacing:.14em;
+  background:linear-gradient(135deg,#f9e27d,#e6c45a,#c9a227);
+  border:none;
+  border-radius:16px;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(201,162,39,.45);
+  transition:.35s;
+}
+.gold-btn:hover{transform:translateY(-4px)}
+
+/* HEADER */
+.header{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  padding:24px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(245,245,247,.85);
+  backdrop-filter:blur(12px);
+  opacity:0;
+  transform:translateY(-20px);
+  transition:.4s;
+  z-index:1000;
+}
+.header.show{opacity:1;transform:translateY(0)}
+
+.logo{
+  height:80px;width:80px;
+  border-radius:50%;
+  object-fit:cover;
+  transition:.3s;
+}
+.logo:hover{transform:scale(1.08)}
+
+.menu-btn{font-size:22px;cursor:pointer}
+
+/* WINDOWS 11 MENU */
+.win11-menu{
+  position:fixed;
+  top:24px;
+  right:-340px;
+  width:300px;
+  padding:28px;
+  border-radius:20px;
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(18px);
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+  transition:.45s;
+  z-index:2000;
+}
+.win11-menu.show{right:24px}
+.win11-menu a{
+  display:block;
+  padding:14px 18px;
+  margin-bottom:10px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#1d1d1f;
+}
+.win11-menu a:hover{background:rgba(0,0,0,.06)}
+
+.win11-close{text-align:right;cursor:pointer}
+
+/* CONTENT */
+.section{padding:120px 20px;text-align:center}
+.stats{display:flex;justify-content:center;gap:80px;padding:80px}
+.stats strong{font-size:44px}
+.stats span{font-size:14px;color:#6e6e73}
+
+.profile{display:flex;gap:40px;justify-content:center;padding:80px}
+.profile img{width:240px;border-radius:20px}
+.profile.reverse{flex-direction:row-reverse}
+
+/* BUTTON */
+.primary-btn{
+  padding:14px 44px;
+  border-radius:50px;
+  border:none;
+  background:#1d1d1f;
+  color:#fff;
+  cursor:pointer;
 }
 
-/* =========================
-   GOLD BAR ENTER BUTTON
-========================= */
-.enter-btn.gold-btn {
-  position: absolute;
-  right: 64px;
-  bottom: 64px;
+/* SCROLL */
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.show{opacity:1;transform:translateY(0)}
 
-  padding: 20px 72px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-
-  color: #1d1d1f;
-
-  background: linear-gradient(
-    135deg,
-    #f9e27d,
-    #e6c45a,
-    #c9a227
-  );
-
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.35s ease;
-
-  box-shadow:
-    0 10px 24px rgba(201, 162, 39, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.65);
-}
-
-.enter-btn.gold-btn:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 18px 36px rgba(201, 162, 39, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.75);
-}
-
-.enter-btn.gold-btn:active {
+/* MOBILE */
+@media(max-width:768px){
+  .logo{height:60px;width:60px}
+  .stats,.profile{flex-direction:column}
+  .gold-btn{right:24px;bottom:24px;padding:16px 52px}
+                  }.enter-btn.gold-btn:active {
   transform: translateY(-1px);
 }
 
