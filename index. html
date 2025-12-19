@@ -2,53 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mufee International (PVT) LTD</title>
+<title>Mufee International</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.banner {
-  height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-
-.banner h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  color: #d4af37;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-}
-
-.welcome-btn {
-  border: 1px solid #d4af37;
-  padding: 14px 40px;
-  color: #d4af37;
-  text-decoration: none;
-  font-size: 16px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="entry">
 
-<div class="banner">
-  <div>
+<div class="entry-screen" style="background-image:url('banner.png')">
+  <div class="entry-content">
     <h1>MUFEE INTERNATIONAL (PVT) LTD</h1>
-    <a class="welcome-btn" href="home.html">WELCOME</a>
+    <button onclick="location.href='home.html'">ENTER</button>
   </div>
 </div>
 
