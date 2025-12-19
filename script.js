@@ -1,22 +1,40 @@
-function openMenu(){
-  document.getElementById("menu").classList.add("show");
-}
-function closeMenu(){
-  document.getElementById("menu").classList.remove("show");
+/* MENU OPEN / CLOSE */
+function openMenu() {
+  const menu = document.getElementById("menu");
+  if (menu) menu.classList.add("show");
 }
 
-/* Header show after scroll */
-window.addEventListener("scroll",()=>{
-  const header=document.querySelector(".header");
-  if(window.scrollY>80){header.classList.add("show")}
-  else{header.classList.remove("show")}
+function closeMenu() {
+  const menu = document.getElementById("menu");
+  if (menu) menu.classList.remove("show");
+}
+
+/* HEADER SHOW AFTER SCROLL */
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".header");
+  if (!header) return;
+
+  if (window.scrollY > 80) {
+    header.classList.add("show");
+  } else {
+    header.classList.remove("show");
+  }
 });
 
-/* Scroll reveal */
-const obs=new IntersectionObserver(e=>{
-  e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"))
-},{threshold:.15});
-document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));  );
+/* SCROLL REVEAL */
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".reveal");
 
-  reveals.forEach((el) => observer.observe(el));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
 });
