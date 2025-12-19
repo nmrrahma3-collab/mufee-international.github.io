@@ -12,8 +12,8 @@
 ========================= */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f5f5f7;
-  color: #1d1d1f;
+  background: #f5f5f7;     /* Apple light background */
+  color: #1d1d1f;          /* Apple dark text */
 }
 
 /* =========================
@@ -31,12 +31,12 @@ body {
 /* =========================
    GOLD BAR ENTER BUTTON
 ========================= */
-.gold-btn {
+.enter-btn.gold-btn {
   position: absolute;
   right: 64px;
   bottom: 64px;
 
-  padding: 20px 70px;
+  padding: 20px 72px;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -52,7 +52,6 @@ body {
 
   border: none;
   border-radius: 16px;
-
   cursor: pointer;
   transition: all 0.35s ease;
 
@@ -61,37 +60,15 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
-/* Hover – luxury lift */
-.gold-btn:hover {
+.enter-btn.gold-btn:hover {
   transform: translateY(-4px);
   box-shadow:
     0 18px 36px rgba(201, 162, 39, 0.55),
     inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
-/* Click press */
-.gold-btn:active {
+.enter-btn.gold-btn:active {
   transform: translateY(-1px);
-}
-
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
-@media (max-width: 768px) {
-  .gold-btn {
-    right: 24px;
-    bottom: 24px;
-    padding: 16px 52px;
-    font-size: 15px;
-    border-radius: 14px;
-  }
-}  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.enter-btn:hover {
-  transform: scale(1.05);
-  background: rgba(255, 255, 255, 1);
 }
 
 /* =========================
@@ -104,16 +81,25 @@ body {
   padding: 24px 40px;
 }
 
-/* LOGO – ROUND & BIG */
+/* =========================
+   LOGO – ROUND, BIG & ZOOM
+========================= */
 .logo {
-  height: 72px;          /* BIG & PREMIUM */
-  width: 72px;
+  height: 80px;           /* Bigger & premium */
+  width: 80px;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* MENU BUTTON */
+.logo:hover {
+  transform: scale(1.08); /* Subtle Apple-style zoom */
+}
+
+/* =========================
+   MENU BUTTON
+========================= */
 .menu-btn {
   font-size: 22px;
   cursor: pointer;
@@ -130,7 +116,7 @@ body {
   height: 100%;
   background: #ffffff;
   padding: 40px;
-  transition: 0.4s ease;
+  transition: right 0.4s ease;
   z-index: 999;
 }
 
@@ -220,7 +206,7 @@ body {
 }
 
 /* =========================
-   BUTTONS
+   PRIMARY BUTTON
 ========================= */
 .primary-btn {
   padding: 14px 44px;
@@ -230,7 +216,7 @@ body {
   color: #ffffff;
   font-size: 15px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .primary-btn:hover {
@@ -238,7 +224,7 @@ body {
 }
 
 /* =========================
-   SCROLL ANIMATION
+   SCROLL REVEAL
 ========================= */
 .reveal {
   opacity: 0;
@@ -260,8 +246,8 @@ body {
   }
 
   .logo {
-    height: 56px;
-    width: 56px;
+    height: 60px;
+    width: 60px;
   }
 
   .stats {
@@ -280,121 +266,11 @@ body {
   .section h2 {
     font-size: 28px;
   }
-  }}
 
-.section h2 {
-  font-size: 36px;
-  font-weight: 500;
-}
-
-.section p {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-/* STATS */
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  padding: 80px 20px;
-}
-
-.stats div {
-  text-align: center;
-}
-
-.stats strong {
-  font-size: 42px;
-}
-
-.stats span {
-  display: block;
-  font-size: 14px;
-  color: #6e6e73;
-}
-
-/* PROFILE */
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 80px 20px;
-}
-
-.profile img {
-  width: 240px;
-  border-radius: 16px;
-}
-
-.profile.reverse {
-  flex-direction: row-reverse;
-}
-
-/* BUTTON */
-.primary-btn {
-  padding: 14px 40px;
-  border-radius: 40px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .stats {
-    flex-direction: column;
-    gap: 30px;
+  .enter-btn.gold-btn {
+    right: 24px;
+    bottom: 24px;
+    padding: 16px 52px;
+    font-size: 15px;
   }
-  .profile {
-    flex-direction: column;
-  }
-  .logo {
-    height: 48px;
-  }
-}.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.entry-screen {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.entry-content {
-  text-align: center;
-}
-
-.entry-content h1 {
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.entry-content button {
-  padding: 14px 40px;
 }
