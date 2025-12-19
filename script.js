@@ -1,19 +1,40 @@
+/* =========================
+   RIGHT SIDE MENU
+========================= */
+
 function openMenu() {
-  document.getElementById("menu").style.right = "0";
+  const menu = document.getElementById("menu");
+  if (menu) {
+    menu.style.right = "0";
+  }
 }
 
 function closeMenu() {
-  document.getElementById("menu").style.right = "-300px";
+  const menu = document.getElementById("menu");
+  if (menu) {
+    menu.style.right = "-300px";
+  }
 }
 
-const elements = document.querySelectorAll(".reveal");
+/* =========================
+   SCROLL REVEAL ANIMATION
+========================= */
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold: 0.15
     }
-  });
-});
+  );
 
-elements.forEach(el => observer.observe(el));
+  reveals.forEach((el) => observer.observe(el));
+});
