@@ -1,1 +1,101 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fff;
+  color: #111;
+}
 
+@media (prefers-color-scheme: dark) {
+  body { background: #000; color: #fff; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  height: 32px;
+  cursor: pointer;
+}
+
+.menu-btn {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.side-menu {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background: #fff;
+  padding: 40px;
+  transition: 0.4s;
+  z-index: 1000;
+}
+
+.side-menu a {
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  gap: 40px;
+}
+
+.profile img {
+  width: 220px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.entry-screen {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entry-content {
+  text-align: center;
+}
+
+.entry-content h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.entry-content button {
+  padding: 14px 40px;
+}
