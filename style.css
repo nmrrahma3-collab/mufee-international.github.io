@@ -1,4 +1,6 @@
-/* ================= RESET ================= */
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +8,72 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body {
-  background: #ffffff;
-  color: #111;
-  line-height: 1.6;
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
-/* ================= HEADER ================= */
+/* =========================================================
+   BANNER (ENTER) PAGE – FIXED, NO SCROLL
+========================================================= */
+.banner-body {
+  overflow: hidden;
+}
+
+.banner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* ENTER BUTTON */
+.enter-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  padding: 16px 44px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  background: linear-gradient(135deg, #f5d27a, #d4af37);
+  text-decoration: none;
+  border-radius: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+/* Mobile banner fix */
+@media (max-width: 768px) {
+  .enter-btn {
+    bottom: 25px;
+    right: 25px;
+    padding: 14px 36px;
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #ffffff;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 60px;
   border-bottom: 1px solid #eee;
-}
-
-.logo-box {
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -38,10 +84,9 @@ body {
 
 .round-logo {
   border-radius: 50%;
-  border: 3px solid #d4af37; /* gold */
+  border: 3px solid #d4af37;
 }
 
-/* ================= NAV ================= */
 .nav a {
   margin-left: 28px;
   text-decoration: none;
@@ -56,7 +101,7 @@ body {
   width: 0%;
   height: 2px;
   background: #d4af37;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
   transition: 0.3s;
 }
@@ -65,7 +110,9 @@ body {
   width: 100%;
 }
 
-/* ================= HERO SECTION ================= */
+/* =========================================================
+   HERO / HOME SECTION (BALANCED)
+========================================================= */
 .hero {
   min-height: 85vh;
   display: flex;
@@ -75,33 +122,27 @@ body {
   gap: 60px;
 }
 
-/* LEFT TEXT */
 .hero-left {
   flex: 1;
 }
 
 .hero-left h1 {
   font-size: 54px;
-  font-weight: 700;
   line-height: 1.2;
+  font-weight: 700;
 }
 
-.hero-left h1 span {
-  color: #111;
-}
-
-.hero-left .gold {
+.gold {
   color: #d4af37;
 }
 
 .hero-left p {
   margin-top: 22px;
   font-size: 18px;
+  color: #555;
   max-width: 520px;
-  color: #444;
 }
 
-/* RIGHT IMAGE */
 .hero-right {
   flex: 1;
   display: flex;
@@ -111,28 +152,26 @@ body {
 .hero-image {
   width: 100%;
   max-width: 520px;
-  border-radius: 26px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* ================= JOURNEY ================= */
+/* =========================================================
+   JOURNEY SECTION
+========================================================= */
 .journey {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 60px;
   gap: 60px;
+  padding: 100px 60px;
   background: #fafafa;
 }
 
-.journey-image img {
+.journey img {
   width: 100%;
-  max-width: 460px;
-  border-radius: 26px;
-}
-
-.journey-text {
-  flex: 1;
+  max-width: 420px;
+  border-radius: 28px;
 }
 
 .journey-text h2 {
@@ -140,17 +179,15 @@ body {
   margin-bottom: 20px;
 }
 
-.journey-text .gold {
-  color: #d4af37;
-}
-
 .journey-text p {
   max-width: 520px;
-  color: #555;
   font-size: 17px;
+  color: #555;
 }
 
-/* ================= SERVICES ================= */
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
 .services {
   padding: 100px 60px;
 }
@@ -168,10 +205,10 @@ body {
 }
 
 .service-card {
-  background: #fff;
-  border-radius: 22px;
-  padding: 30px;
+  background: #ffffff;
+  padding: 35px 25px;
   text-align: center;
+  border-radius: 22px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -182,16 +219,19 @@ body {
 }
 
 .service-card img {
-  width: 100%;
-  max-width: 160px;
-  margin-bottom: 20px;
+  max-width: 140px;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 18px;
 }
 
 .service-card h3 {
   font-size: 18px;
 }
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 .footer {
   background: #111;
   color: #fff;
@@ -200,8 +240,16 @@ body {
   margin-top: 80px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
 @media (max-width: 900px) {
+  .header {
+    padding: 18px 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .hero,
   .journey {
     flex-direction: column;
@@ -209,15 +257,11 @@ body {
   }
 
   .hero-left h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .hero-right,
-  .journey-image {
+  .journey img {
     margin-top: 40px;
-  }
-
-  .header {
-    padding: 18px 30px;
   }
   }
