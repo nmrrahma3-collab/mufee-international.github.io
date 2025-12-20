@@ -2,14 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
   background: #f7f7f7;
+  color: #222;
 }
 
-/* TOP BAR */
+/* ===== OVAL TOP BAR ===== */
 .top-bar {
   padding: 20px;
 }
@@ -19,81 +20,156 @@ body {
   margin: auto;
   background: #ffffff;
   border-radius: 60px;
-  padding: 12px 24px;
+  padding: 14px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* LOGO */
+/* ===== LOGO (ROUND + BIG) ===== */
 .logo-circle {
-  width: 48px;
-  height: 48px;
+  width: 80px;        /* ~1 inch look */
+  height: 80px;
   border-radius: 50%;
-  background: #f1f1f1;
+  background: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-circle img {
-  width: 28px;
+  width: 52px;
   height: auto;
+  border-radius: 50%;
 }
 
-/* NAV LINKS */
+/* ===== MENU ===== */
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 28px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #444;
-  font-weight: 500;
-}
-
-/* CONTACT BUTTON */
-.contact-btn {
-  background: #eee;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
   color: #333;
   font-weight: 500;
+  position: relative;
 }
 
-/* HERO SECTION */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #c9a24d;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== CONTACT BUTTON ===== */
+.contact-btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===== HERO ===== */
 .hero {
   max-width: 1200px;
-  margin: 80px auto;
+  margin: 90px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 60px;
 }
 
-/* LEFT TEXT */
-.hero-left h1 {
-  font-size: 56px;
+/* LEFT SIDE */
+.hero-left {
+  width: 50%;
+}
+
+/* HERO TEXT BOX */
+.hero-text-box {
+  background: #ffffff;
+  padding: 36px 42px;
+  border-radius: 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hero-text-box h1 {
+  margin: 8px 0;
+  font-size: 34px;
+  font-weight: 700;
   line-height: 1.2;
+}
+
+.black {
   color: #111;
 }
 
-.hero-left h1 span {
-  color: #d43b2e;
+.gold {
+  color: #c9a24d;
 }
 
 /* RIGHT IMAGE */
 .hero-right {
-  background: #fff;
-  padding: 20px;
-  border-radius: 30px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  width: 45%;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 38px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 }
 
 .hero-right img {
-  width: 420px;
-  border-radius: 25px;
+  width: 100%;
+  border-radius: 32px;
+}
+
+/* ===== MOBILE POLISH ===== */
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin: 50px 20px;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-text-box h1 {
+    font-size: 26px;
+  }
+
+  .hero-right {
+    margin-top: 30px;
+  }
+
+  .contact-btn {
+    padding: 10px 20px;
+  }
+
+  .logo-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-circle img {
+    width: 46px;
+  }
 }
