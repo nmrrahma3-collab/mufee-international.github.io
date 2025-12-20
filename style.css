@@ -11,73 +11,86 @@ body {
   color: #111;
 }
 
-/* ================= TOP NAV BAR ================= */
-.header {
+/* ================= OVAL TOP BAR ================= */
+.top-bar {
+  padding: 20px;
+}
+
+.bar-inner {
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 14px 26px;
+  margin: auto;
   background: #ffffff;
-  border-radius: 50px;
+  border-radius: 60px;
+  padding: 14px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* LOGO */
-.logo {
+/* ================= LOGO ================= */
+.logo-circle {
+  width: 80px;          /* ~1 inch look */
+  height: 80px;
+  border-radius: 50%;
+  background: #f2f2f2;
   display: flex;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
 }
 
-.logo img {
-  width: 70px;        /* BIG ROUND LOGO */
-  height: 70px;
+.logo-circle img {
+  width: 52px;
+  height: auto;
   border-radius: 50%;
-  object-fit: cover;
 }
 
-/* MENU */
-.nav {
+/* ================= MENU ================= */
+.nav-links {
   display: flex;
-  gap: 26px;
+  gap: 28px;
 }
 
-.nav a {
+.nav-links a {
   text-decoration: none;
-  color: #111;
+  color: #333;
   font-weight: 500;
-  font-size: 15px;
+  position: relative;
 }
 
-.nav a:hover {
-  color: #c9a24d;
-}
-
-/* CONTACT BUTTON */
-.contact-btn {
-  padding: 10px 22px;
-  border-radius: 30px;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
   background: #c9a24d;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= CONTACT BUTTON ================= */
+.contact-btn {
+  background: #111;
   color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: 600;
   font-size: 14px;
 }
 
-.contact-btn:hover {
-  background: #b18d3f;
-}
-
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 .hero {
   max-width: 1200px;
-  margin: 70px auto;
+  margin: 90px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 }
 
 /* LEFT */
@@ -91,14 +104,13 @@ body {
   padding: 26px 34px;
   border-radius: 26px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  animation: fadeUp 1s ease-out forwards;
 }
 
 .hero-text-box h1 {
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 1.15;
-  margin: 6px 0;
+  margin: 4px 0;          /* less gap */
+  font-size: 26px;        /* balanced size */
+  font-weight: 600;
+  line-height: 1.05;
 }
 
 /* TEXT COLORS */
@@ -108,49 +120,35 @@ body {
 
 .gold {
   color: #c9a24d;
+  font-size: 30px;        /* slightly bigger */
+  font-weight: 700;
 }
 
-/* ================= RIGHT IMAGE ================= */
+/* RIGHT IMAGE */
 .hero-right {
   width: 45%;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 38px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 }
 
 .hero-right img {
   width: 100%;
-  border-radius: 30px;
-  object-fit: cover;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  border-radius: 32px;
 }
 
-/* ================= ANIMATION ================= */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 900px) {
 
-  .header {
-    flex-direction: column;
-    gap: 14px;
-    border-radius: 24px;
-  }
-
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  .nav-links {
+    display: none;
   }
 
   .hero {
     flex-direction: column;
-    margin: 40px 20px;
+    margin: 50px 20px;
+    text-align: center;
   }
 
   .hero-left,
@@ -159,11 +157,27 @@ body {
   }
 
   .hero-text-box h1 {
-    font-size: 28px;
-    text-align: center;
+    font-size: 22px;
   }
 
-  .hero-right img {
-    border-radius: 24px;
+  .gold {
+    font-size: 26px;
   }
-    }
+
+  .hero-right {
+    margin-top: 30px;
+  }
+
+  .logo-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-circle img {
+    width: 46px;
+  }
+
+  .contact-btn {
+    padding: 10px 20px;
+  }
+}
