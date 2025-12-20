@@ -51,8 +51,10 @@ body {
 }
 
 .hero-left h1 {
-  font-size: 54px;
-  line-height: 1.2;
+  font-size: 72px;      /* BIG TEXT */
+  line-height: 1.1;
+  font-weight: 800;
+  max-width: 700px;     /* prevents wrapping too early */
 }
 
 .gold {
@@ -75,6 +77,10 @@ body {
   width: 100%;
   max-width: 520px;
   border-radius: 28px;
+}
+
+.hero-left {
+  padding-right: 40px;
 }
 
 /* JOURNEY */
@@ -141,6 +147,12 @@ body {
     text-align: center;
   }
 
+  @media (max-width: 900px) {
+  .hero-left h1 {
+    font-size: 42px;
+  }
+  }
+  
   .hero-left h1 {
     font-size: 38px;
   }
