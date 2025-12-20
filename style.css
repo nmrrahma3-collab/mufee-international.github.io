@@ -1,3 +1,4 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -7,121 +8,100 @@
 
 body {
   background: #f7f7f7;
-  color: #222;
+  color: #111;
 }
 
-/* ===== OVAL TOP BAR ===== */
-.top-bar {
-  padding: 20px;
-}
-
-.bar-inner {
+/* ================= TOP NAV BAR ================= */
+.header {
   max-width: 1200px;
-  margin: auto;
+  margin: 20px auto;
+  padding: 14px 26px;
   background: #ffffff;
-  border-radius: 60px;
-  padding: 14px 32px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* ===== LOGO (ROUND + BIG) ===== */
-.logo-circle {
-  width: 80px;        /* ~1 inch look */
-  height: 80px;
-  border-radius: 50%;
-  background: #f2f2f2;
+/* LOGO */
+.logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 14px;
 }
 
-.logo-circle img {
-  width: 52px;
-  height: auto;
+.logo img {
+  width: 70px;        /* BIG ROUND LOGO */
+  height: 70px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-/* ===== MENU ===== */
-.nav-links {
+/* MENU */
+.nav {
   display: flex;
-  gap: 28px;
+  gap: 26px;
 }
 
-.nav-links a {
+.nav a {
   text-decoration: none;
-  color: #333;
+  color: #111;
   font-weight: 500;
-  position: relative;
+  font-size: 15px;
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #c9a24d;
-  transition: 0.3s;
+.nav a:hover {
+  color: #c9a24d;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* ===== CONTACT BUTTON ===== */
+/* CONTACT BUTTON */
 .contact-btn {
-  background: #111;
-  color: #fff;
-  padding: 12px 26px;
+  padding: 10px 22px;
   border-radius: 30px;
+  background: #c9a24d;
+  color: #fff;
   text-decoration: none;
+  font-weight: 600;
   font-size: 14px;
 }
 
-/* ===== HERO ===== */
+.contact-btn:hover {
+  background: #b18d3f;
+}
+
+/* ================= HERO SECTION ================= */
 .hero {
   max-width: 1200px;
-  margin: 90px auto;
+  margin: 70px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 40px;
 }
 
-/* LEFT SIDE */
+/* LEFT */
 .hero-left {
   width: 50%;
 }
 
-/* HERO TEXT BOX */
+/* TEXT BOX */
 .hero-text-box {
   background: #ffffff;
-  padding: 26px 34px;     /* reduced height */
-  border-radius: 24px;
+  padding: 26px 34px;
+  border-radius: 26px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: fadeUp 1s ease-out forwards;
 }
 
 .hero-text-box h1 {
-  margin: 4px 0;        /* LESS top & bottom gap */
   font-size: 34px;
   font-weight: 700;
-  line-height: 1.05;    /* TIGHT line spacing */
+  line-height: 1.15;
+  margin: 6px 0;
 }
 
-.black {
-  color: #111;
-}
-
-.hero-text-box .gold {
-  color: #c9a24d;
-  font-size: 38px;
-  font-weight: 800;
-}
-
+/* TEXT COLORS */
 .black {
   color: #111;
 }
@@ -130,31 +110,47 @@ body {
   color: #c9a24d;
 }
 
-/* RIGHT IMAGE */
+/* ================= RIGHT IMAGE ================= */
 .hero-right {
   width: 45%;
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 38px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 }
 
 .hero-right img {
   width: 100%;
-  border-radius: 32px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-/* ===== MOBILE POLISH ===== */
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
 
-  .nav-links {
-    display: none;
+  .header {
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 24px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero {
     flex-direction: column;
-    margin: 50px 20px;
-    text-align: center;
+    margin: 40px 20px;
   }
 
   .hero-left,
@@ -163,23 +159,11 @@ body {
   }
 
   .hero-text-box h1 {
-    font-size: 26px;
+    font-size: 28px;
+    text-align: center;
   }
 
-  .hero-right {
-    margin-top: 30px;
+  .hero-right img {
+    border-radius: 24px;
   }
-
-  .contact-btn {
-    padding: 10px 20px;
-  }
-
-  .logo-circle {
-    width: 70px;
-    height: 70px;
-  }
-
-  .logo-circle img {
-    width: 46px;
-  }
-}
+    }
