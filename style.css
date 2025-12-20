@@ -1,1 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
 
+body {
+  background: #ffffff;
+  color: #111;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  position: fixed;
+  inset: 0;
+  background: black;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.enter-btn {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  padding: 16px 40px;
+  font-size: 18px;
+  background: linear-gradient(135deg, gold, #c9a000);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+/* ===== MAIN ===== */
+.hidden {
+  display: none;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.logo {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.menu a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  gap: 60px;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+}
+
+.hero-text span {
+  color: goldenrod;
+}
+
+.hero-img img {
+  width: 420px;
+  border-radius: 30px;
+}
+
+/* ===== JOURNEY ===== */
+.journey {
+  padding: 80px;
+  text-align: center;
+}
+
+.journey img {
+  width: 300px;
+  margin: 30px 0;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  padding: 80px;
+  background: #f7f7f7;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* ===== TEAM ===== */
+.team {
+  padding: 80px;
+  text-align: center;
+}
+
+.team-card {
+  width: 260px;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 320px;
+  transition: transform .8s;
+  transform-style: preserve-3d;
+}
+
+.team-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card-front {
+  background: #eee;
+}
+
+.card-back {
+  background: gold;
+  transform: rotateY(180deg);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: white;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+    }
