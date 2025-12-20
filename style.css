@@ -1,29 +1,18 @@
-/* =========================
-   RESET & BASE
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #ffffff;
+  background: #fff;
   color: #111;
-  line-height: 1.6;
 }
 
-/* =========================
-   TOP NAVBAR
-========================= */
+/* NAVBAR */
 header {
-  width: 100%;
-  background: #fff;
   border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .navbar {
@@ -31,37 +20,24 @@ header {
   margin: auto;
   padding: 14px 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.logo {
-  display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .logo img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
 .nav-links a {
-  margin-left: 22px;
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: 600;
   color: #111;
+  font-weight: 600;
 }
 
-.nav-links a:hover {
-  color: #b08a3c;
-}
-
-/* =========================
-   HERO (HOME)
-========================= */
+/* HERO */
 .home-hero {
   max-width: 1200px;
   margin: 60px auto;
@@ -74,32 +50,17 @@ header {
 
 .hero-text h1 {
   font-size: 46px;
-  line-height: 1.2;
 }
 
-.hero-text .black {
-  color: #000;
-}
-
-.hero-text .gold {
-  color: #b08a3c;
-}
-
-.hero-text p {
-  margin-top: 16px;
-  color: #555;
-  max-width: 480px;
-}
+.black { color: #000; }
+.gold { color: #b08a3c; }
 
 .hero-image img {
   width: 100%;
-  border-radius: 22px;
-  object-fit: cover;
+  border-radius: 24px;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 .services {
   max-width: 1200px;
   margin: 80px auto;
@@ -108,7 +69,6 @@ header {
 
 .services h2 {
   text-align: center;
-  font-size: 34px;
   margin-bottom: 40px;
 }
 
@@ -119,97 +79,75 @@ header {
 }
 
 .service-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.service-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   background: #fafafa;
   border-radius: 22px;
   padding: 14px;
   text-align: center;
-  transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-}
-
-.service-card img {
+.card-front img {
   width: 100%;
   border-radius: 18px;
 }
 
-.service-card h4 {
-  margin-top: 12px;
-  font-size: 16px;
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* =========================
-   ABOUT SUMMARY
-========================= */
+/* ABOUT */
 .about-home {
-  max-width: 1000px;
-  margin: 90px auto;
-  padding: 0 20px;
+  max-width: 900px;
+  margin: 80px auto;
   text-align: center;
+  padding: 0 20px;
 }
 
-.about-home h2 {
-  font-size: 34px;
-  margin-bottom: 18px;
-}
-
-.about-home p {
-  color: #555;
-  max-width: 760px;
-  margin: auto;
-}
-
-/* =========================
-   TEAM
-========================= */
+/* TEAM */
 .team {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 80px auto;
   padding: 0 20px;
 }
 
-.team h2 {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 40px;
-}
-
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
-}
-
-.team-card {
-  background: #fafafa;
-  border-radius: 24px;
-  padding: 16px;
-  text-align: center;
 }
 
 .team-card img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 22px;
 }
 
-.team-card h4 {
-  margin-top: 14px;
-}
-
-.team-card span {
-  font-size: 14px;
-  color: #777;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
-  background: #f8f8f8;
-  margin-top: 80px;
+  background: #f7f7f7;
   padding: 60px 20px 30px;
 }
 
@@ -221,27 +159,20 @@ footer {
   gap: 30px;
 }
 
-.footer-inner h4 {
-  margin-bottom: 14px;
-}
-
 .footer-inner a {
   display: block;
-  text-decoration: none;
   color: #444;
+  text-decoration: none;
   margin-bottom: 8px;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
-  color: #777;
   font-size: 14px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 @media (max-width: 900px) {
   .home-hero {
     grid-template-columns: 1fr;
@@ -260,4 +191,4 @@ footer {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  }
+}
