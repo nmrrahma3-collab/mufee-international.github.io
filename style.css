@@ -1,3 +1,4 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,12 @@
 body {
   background: #ffffff;
   color: #111;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ===== HEADER ===== */
@@ -37,6 +44,7 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav a.active,
@@ -51,6 +59,21 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.hero-text {
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-text h1 {
@@ -68,6 +91,21 @@ body {
   width: 100%;
   max-width: 520px;
   border-radius: 30px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* ===== COMMON ===== */
+.gold {
+  color: #c9a14a;
+}
+
+section {
+  scroll-margin-top: 90px;
 }
 
 /* ===== ABOUT ===== */
@@ -84,6 +122,12 @@ body {
   padding: 70px 60px;
   border-radius: 36px;
   box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.12);
 }
 
 .about-divider {
@@ -166,6 +210,12 @@ body {
   backface-visibility: hidden;
   padding: 20px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transition: box-shadow 0.5s ease;
+}
+
+.service-card:hover .service-front,
+.service-card:hover .service-back {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
 }
 
 .service-front {
@@ -210,6 +260,12 @@ body {
   object-fit: cover;
   border-radius: 28px;
   margin-bottom: 14px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.team-card img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.18);
 }
 
 .team-card span {
@@ -219,15 +275,11 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: #111;
+  background: linear-gradient(135deg, #111, #1c1c1c);
   color: #ffffff;
   text-align: center;
-  padding: 36px;
-}
-
-/* ===== COMMON ===== */
-.gold {
-  color: #c9a14a;
+  padding: 42px;
+  font-size: 14px;
 }
 
 /* ===== MOBILE ===== */
@@ -243,5 +295,9 @@ body {
 
   .header {
     padding: 0 30px;
+  }
+
+  .about-box {
+    padding: 50px 30px;
   }
   }
