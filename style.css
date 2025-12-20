@@ -1,105 +1,96 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
 }
 
-body {
-  background: #ffffff;
-  color: #111;
+body{
+  background:#fff;
+  color:#111;
 }
 
 /* HEADER */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 80px;
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 80px;
 }
 
-.logo {
-  height: 55px;
+.logo{
+  height:55px;
 }
 
-.nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
+nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#111;
+  font-weight:500;
 }
 
-.nav a:hover {
-  color: #c9a24d;
+nav a:hover{
+  color:#c9a24d;
 }
 
-/* HOME SECTION */
-.home {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 90px 80px;
-  gap: 60px;
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:90px 80px;
+  gap:60px;
 }
 
-/* LEFT TEXT */
-.home-text {
-  width: 50%;
+.hero-text{
+  width:50%;
 }
 
-.home-text h1 {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
+.hero-text h1{
+  font-size:56px;
+  line-height:1.2;
 }
 
-.home-text span {
-  color: #c9a24d;
+.hero-text span{
+  color:#c9a24d;
 }
 
-.home-text p {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #666;
+.hero-text p{
+  margin-top:20px;
+  color:#666;
 }
 
-/* RIGHT IMAGE */
-.home-image {
-  width: 50%;
-  display: flex;
-  justify-content: center;
+.hero-image{
+  width:50%;
+  display:flex;
+  justify-content:center;
 }
 
-.home-image img {
-  width: 100%;
-  max-width: 540px;
-  border-radius: 35px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+.hero-image img{
+  width:100%;
+  max-width:540px;
+  border-radius:30px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 900px) {
-  .header {
-    flex-direction: column;
-    gap: 20px;
+/* MOBILE */
+@media(max-width:900px){
+  .header{
+    flex-direction:column;
+    gap:20px;
   }
 
-  .home {
-    flex-direction: column;
-    padding: 50px 20px;
-    text-align: center;
+  .hero{
+    flex-direction:column;
+    padding:50px 20px;
+    text-align:center;
   }
 
-  .home-text,
-  .home-image {
-    width: 100%;
+  .hero-text,.hero-image{
+    width:100%;
   }
 
-  .home-text h1 {
-    font-size: 40px;
-  }
-
-  .home-image img {
-    max-width: 100%;
+  .hero-text h1{
+    font-size:38px;
   }
 }
