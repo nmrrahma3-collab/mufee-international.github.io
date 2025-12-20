@@ -126,9 +126,12 @@ body {
 }
 
 .service-card img {
-  max-width: 140px;
-  margin-bottom: 15px;
-  border-radius: 18px;
+  width: 100%;
+  max-width: 190px;   /* 👈 bigger image */
+  margin: 0 auto 18px;
+  border-radius: 22px;
+  transition: transform 0.4s ease;
+
 }
 
 /* FOOTER */
