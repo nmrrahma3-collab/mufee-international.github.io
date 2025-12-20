@@ -18,8 +18,8 @@ body {
   height: 72px;
   padding: 0 60px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   background: #ffffff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   z-index: 1000;
@@ -28,8 +28,8 @@ body {
 .site-logo {
   width: 48px;
   height: 48px;
-  object-fit: cover;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav a {
@@ -70,28 +70,59 @@ body {
   border-radius: 30px;
 }
 
-.gold {
-  color: #c9a14a;
-}
-
 /* ===== ABOUT ===== */
 .about-home {
-  padding: 90px 60px;
-  text-align: center;
+  padding: 120px 60px;
+  background: linear-gradient(180deg, #ffffff, #f9f9f9);
+}
+
+.about-box {
   max-width: 900px;
   margin: auto;
+  text-align: center;
+  background: #ffffff;
+  padding: 70px 60px;
+  border-radius: 36px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
 }
 
-.about-home h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
+.about-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c9a14a, #f1d27a);
+  margin: 18px auto 30px;
+  border-radius: 2px;
 }
 
-.about-home p {
+.about-box p {
   font-size: 18px;
   color: #555;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 14px;
+}
+
+/* ===== VISION ===== */
+.vision {
+  padding: 100px 60px;
+  background: #111;
+}
+
+.vision-box {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.vision-box h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.vision-box p {
+  font-size: 18px;
+  color: #dddddd;
+  line-height: 1.7;
 }
 
 /* ===== SERVICES ===== */
@@ -117,8 +148,8 @@ body {
 }
 
 .service-inner {
-  position: relative;
   height: 320px;
+  position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
 }
@@ -182,8 +213,8 @@ body {
 }
 
 .team-card span {
-  color: #777;
   font-size: 14px;
+  color: #777;
 }
 
 /* ===== FOOTER ===== */
@@ -192,6 +223,11 @@ body {
   color: #ffffff;
   text-align: center;
   padding: 36px;
+}
+
+/* ===== COMMON ===== */
+.gold {
+  color: #c9a14a;
 }
 
 /* ===== MOBILE ===== */
