@@ -10,163 +10,96 @@ body {
   color: #111;
 }
 
-/* ===== BANNER ===== */
-.banner {
-  position: fixed;
-  inset: 0;
-  background: black;
-}
-
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.enter-btn {
-  position: absolute;
-  bottom: 60px;
-  right: 60px;
-  padding: 16px 40px;
-  font-size: 18px;
-  background: linear-gradient(135deg, gold, #c9a000);
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-/* ===== MAIN ===== */
-.hidden {
-  display: none;
-}
-
-/* ===== HEADER ===== */
+/* HEADER */
 .header {
-  position: sticky;
-  top: 0;
-  background: white;
-  padding: 15px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+  justify-content: space-between;
+  padding: 25px 80px;
 }
 
 .logo {
-  width: 60px;
-  border-radius: 50%;
+  height: 55px;
 }
 
-.menu a {
-  margin-left: 25px;
+.nav a {
+  margin-left: 30px;
   text-decoration: none;
-  color: black;
+  color: #111;
   font-weight: 500;
 }
 
-/* ===== HERO ===== */
-.hero {
+.nav a:hover {
+  color: #c9a24d;
+}
+
+/* HOME SECTION */
+.home {
   display: flex;
   align-items: center;
-  padding: 80px;
+  justify-content: space-between;
+  padding: 90px 80px;
   gap: 60px;
 }
 
-.hero-text h1 {
-  font-size: 52px;
+/* LEFT TEXT */
+.home-text {
+  width: 50%;
 }
 
-.hero-text span {
-  color: goldenrod;
+.home-text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.hero-img img {
-  width: 420px;
-  border-radius: 30px;
+.home-text span {
+  color: #c9a24d;
 }
 
-/* ===== JOURNEY ===== */
-.journey {
-  padding: 80px;
-  text-align: center;
+.home-text p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
 }
 
-.journey img {
-  width: 300px;
-  margin: 30px 0;
+/* RIGHT IMAGE */
+.home-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-/* ===== SERVICES ===== */
-.services {
-  padding: 80px;
-  background: #f7f7f7;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.service-card {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.service-card img {
+.home-image img {
   width: 100%;
-  border-radius: 15px;
+  max-width: 540px;
+  border-radius: 35px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
 
-/* ===== TEAM ===== */
-.team {
-  padding: 80px;
-  text-align: center;
-}
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.team-card {
-  width: 260px;
-  margin: auto;
-  perspective: 1000px;
-}
+  .home {
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
 
-.card-inner {
-  width: 100%;
-  height: 320px;
-  transition: transform .8s;
-  transform-style: preserve-3d;
-}
+  .home-text,
+  .home-image {
+    width: 100%;
+  }
 
-.team-card:hover .card-inner {
-  transform: rotateY(180deg);
-}
+  .home-text h1 {
+    font-size: 40px;
+  }
 
-.card-front, .card-back {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  border-radius: 20px;
-  padding: 20px;
+  .home-image img {
+    max-width: 100%;
+  }
 }
-
-.card-front {
-  background: #eee;
-}
-
-.card-back {
-  background: gold;
-  transform: rotateY(180deg);
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background: #111;
-  color: white;
-  padding: 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 30px;
-    }
