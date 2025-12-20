@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden; /* 🚫 NO SCROLL */
-    }
-
-    /* FULL SCREEN BANNER */
-    body {
-      background-image: url("banner.png");
-      background-size: cover;       /* 🔥 FIT SCREEN */
-      background-position: center;  /* 🔥 CENTER */
-      background-repeat: no-repeat;
-      position: relative;
-      font-family: Arial, sans-serif;
-    }
-
-    /* GOLD ENTER BUTTON */
-    .enter-btn {
-      position: absolute;
-      bottom: 40px;
-      right: 40px;
-
-      padding: 18px 56px;
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-decoration: none;
-
-      color: #000;
-      background: linear-gradient(
-        135deg,
-        #d4af37,
-        #f6e27a
-      );
-
-      border-radius: 50px;
-      box-shadow: 0 10px 25px rgba(212,175,55,0.5);
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .enter-btn {
-        bottom: 20px;
-        right: 20px;
-        padding: 16px 44px;
-        font-size: 16px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mufee International</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <a href="#" class="enter-btn">ENTER</a>
+<!-- ================= ENTER / BANNER PAGE ================= -->
+<section class="banner">
+  <img src="Images/banner.png" class="banner-img" alt="Banner">
+  <button class="enter-btn" onclick="enterSite()">ENTER</button>
+</section>
+
+<!-- ================= MAIN WEBSITE ================= -->
+<div id="mainSite" class="hidden">
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <img src="Images/logo.png" class="logo" alt="Logo">
+
+  <nav class="menu">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#journey">Journey</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== HOME / HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h1>We Build <span>Global Cosmetic</span><br>Solutions</h1>
+    <p>Import • Distribution • Quality</p>
+  </div>
+
+  <div class="hero-img">
+    <img src="Images/hero.png" alt="Hero Image">
+  </div>
+</section>
+
+<!-- ===== JOURNEY ===== -->
+<section id="journey" class="journey">
+  <h2>The Journey Behind <span>Mufee International</span></h2>
+  <img src="Images/journey.png" alt="Journey">
+  <p>
+    From vision to global distribution, Mufee International was built on trust,
+    quality, and long-term partnerships in the cosmetic industry.
+  </p>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <img src="Images/service1.png">
+      <h3>Service 1</h3>
+    </div>
+
+    <div class="service-card">
+      <img src="Images/service2.png">
+      <h3>Service 2</h3>
+    </div>
+
+    <div class="service-card">
+      <img src="Images/service3.png">
+      <h3>Service 3</h3>
+    </div>
+
+    <div class="service-card">
+      <img src="Images/service4.png">
+      <h3>Service 4</h3>
+    </div>
+
+    <div class="service-card">
+      <img src="Images/service5.png">
+      <h3>Service 5</h3>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section id="team" class="team">
+  <h2>Our Team</h2>
+
+  <div class="team-card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="Images/logo.png">
+        <h3>Founder</h3>
+      </div>
+      <div class="card-back">
+        <p>CEO – Mufee International<br>Leading global cosmetic distribution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact" class="footer">
+  <div>
+    <h3>Navigation</h3>
+    <p>Home | Services | Journey | Team</p>
+  </div>
+
+  <div>
+    <h3>Contact</h3>
+    <p>Phone: 0774494213</p>
+    <p>Email: nmrrahma3@gmail.com</p>
+  </div>
+
+  <div>
+    <h3>Follow Us</h3>
+    <p>Instagram | Facebook | LinkedIn</p>
+  </div>
+</footer>
+
+</div>
+
+<script>
+function enterSite(){
+  document.querySelector('.banner').style.display = 'none';
+  document.getElementById('mainSite').classList.remove('hidden');
+}
+</script>
 
 </body>
 </html>
