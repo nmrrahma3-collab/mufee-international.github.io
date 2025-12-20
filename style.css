@@ -1,6 +1,3 @@
-/* =====================================================
-   GLOBAL RESET
-===================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,81 +5,23 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-/* =====================================================
-   BANNER PAGE (index.html)
-===================================================== */
-.banner-body {
-  background: #000;
-  overflow: hidden;
-}
-
-.banner-wrapper {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-}
-
-/* Banner image – NO CROP, NO ZOOM */
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;   /* shows full image */
-  background: #000;
-  display: block;
-}
-
-/* ENTER BUTTON – BOTTOM CENTER */
-.enter-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 16px 50px;
-  font-size: 18px;
-  font-weight: 700;
+body {
+  background: #fff;
   color: #111;
-  background: linear-gradient(135deg, #f7d98a, #d4af37);
-  border-radius: 40px;
-  text-decoration: none;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-  z-index: 9999;
 }
 
-/* Mobile banner */
-@media (max-width: 768px) {
-  .enter-btn {
-    padding: 14px 36px;
-    font-size: 16px;
-    bottom: 14px;
-  }
-}
-
-/* =====================================================
-   HEADER (home.html)
-===================================================== */
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
   border-bottom: 1px solid #eee;
 }
 
-/* LOGO */
 .logo {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
 }
 
@@ -91,35 +30,15 @@ html, body {
   border: 3px solid #d4af37;
 }
 
-/* MENU */
 .nav a {
   margin-left: 28px;
   text-decoration: none;
   color: #111;
   font-weight: 500;
-  position: relative;
 }
 
-.nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #d4af37;
-  bottom: -6px;
-  left: 0;
-  transition: 0.3s;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-
-/* =====================================================
-   HERO SECTION (home.html)
-===================================================== */
+/* HERO */
 .hero {
-  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -127,7 +46,6 @@ html, body {
   gap: 60px;
 }
 
-/* LEFT TEXT */
 .hero-left {
   flex: 1;
 }
@@ -135,7 +53,6 @@ html, body {
 .hero-left h1 {
   font-size: 54px;
   line-height: 1.2;
-  font-weight: 700;
 }
 
 .gold {
@@ -143,13 +60,11 @@ html, body {
 }
 
 .hero-left p {
-  margin-top: 22px;
+  margin-top: 20px;
   font-size: 18px;
   color: #555;
-  max-width: 520px;
 }
 
-/* RIGHT IMAGE */
 .hero-right {
   flex: 1;
   display: flex;
@@ -160,23 +75,17 @@ html, body {
   width: 100%;
   max-width: 520px;
   border-radius: 28px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* =====================================================
-   JOURNEY SECTION
-===================================================== */
+/* JOURNEY */
 .journey {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 60px;
   padding: 100px 60px;
   background: #fafafa;
 }
 
 .journey img {
-  width: 100%;
   max-width: 420px;
   border-radius: 28px;
 }
@@ -186,15 +95,7 @@ html, body {
   margin-bottom: 20px;
 }
 
-.journey-text p {
-  max-width: 520px;
-  font-size: 17px;
-  color: #555;
-}
-
-/* =====================================================
-   SERVICES SECTION
-===================================================== */
+/* SERVICES */
 .services {
   padding: 100px 60px;
 }
@@ -212,51 +113,28 @@ html, body {
 }
 
 .service-card {
-  background: #fff;
-  padding: 35px 25px;
   text-align: center;
+  padding: 30px;
   border-radius: 22px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .service-card img {
   max-width: 140px;
-  margin: 0 auto 20px;
-  display: block;
+  margin-bottom: 15px;
   border-radius: 18px;
 }
 
-.service-card h3 {
-  font-size: 18px;
-}
-
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 .footer {
   background: #111;
   color: #fff;
   text-align: center;
   padding: 30px;
-  margin-top: 80px;
 }
 
-/* =====================================================
-   MOBILE RESPONSIVE
-===================================================== */
+/* MOBILE */
 @media (max-width: 900px) {
-  .header {
-    padding: 18px 30px;
-    flex-direction: column;
-    gap: 15px;
-  }
-
   .hero,
   .journey {
     flex-direction: column;
@@ -266,9 +144,4 @@ html, body {
   .hero-left h1 {
     font-size: 38px;
   }
-
-  .hero-right,
-  .journey img {
-    margin-top: 40px;
-  }
-   }
+}
