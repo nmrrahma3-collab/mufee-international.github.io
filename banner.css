@@ -1,54 +1,88 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 html, body {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
-/* BANNER PAGE */
+/* PAGE */
 .banner-body {
   background: black;
 }
 
+/* CONTAINER */
 .banner-container {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
 }
 
+/* BACKGROUND IMAGE */
 .banner-image {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  object-fit: cover;      /* fills full screen */
+  object-fit: cover;
   display: block;
 }
 
-/* ENTER BUTTON – BOTTOM CENTER */
+/* LOGO */
+.banner-logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100px;      /* ~1 inch */
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  padding: 8px;
+}
+
+/* ENTER BUTTON */
 .enter-button {
   position: absolute;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 16px 50px;
+  background: #c9a24d;
+  color: black;
+  text-decoration: none;
+  padding: 14px 36px;
   font-size: 18px;
   font-weight: bold;
-  color: #111;
-  background: linear-gradient(135deg, #f7d98a, #d4af37);
-  border-radius: 40px;
-  text-decoration: none;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border-radius: 30px;
+  z-index: 10;
 }
 
+/* HOVER */
+.enter-button:hover {
+  background: #b08f3c;
+}
+
+/* 📱 MOBILE FIX */
 @media (max-width: 768px) {
+
+  .banner-image {
+    height: 100svh;
+  }
+
+  .banner-logo {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    left: 20px;
+  }
+
   .enter-button {
-    bottom: 18px;
-    padding: 14px 36px;
+    bottom: 20px;
+    padding: 12px 28px;
     font-size: 16px;
   }
 }
