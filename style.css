@@ -106,10 +106,10 @@ body {
 }
 
 .hero-text-box h1 {
-  margin: 8px 0;
+  margin: 4px 0;        /* LESS top & bottom gap */
   font-size: 34px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.05;    /* TIGHT line spacing */
 }
 
 .black {
