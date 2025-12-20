@@ -116,6 +116,16 @@ body {
   color: #111;
 }
 
+.hero-text-box .gold {
+  color: #c9a24d;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.black {
+  color: #111;
+}
+
 .gold {
   color: #c9a24d;
 }
