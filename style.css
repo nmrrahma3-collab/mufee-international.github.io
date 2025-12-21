@@ -29,7 +29,6 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* LOGO */
 .navbar-logo {
   width: 80px;
   height: 80px;
@@ -42,11 +41,9 @@ body {
 
 .navbar-logo img {
   width: 52px;
-  height: auto;
   border-radius: 50%;
 }
 
-/* MENU */
 .navbar-menu {
   display: flex;
   gap: 28px;
@@ -74,7 +71,6 @@ body {
   width: 100%;
 }
 
-/* CONTACT */
 .navbar-contact {
   background: #111;
   color: #ffffff;
@@ -95,7 +91,6 @@ body {
   gap: 50px;
 }
 
-/* LEFT */
 .hero-left {
   width: 50%;
 }
@@ -114,7 +109,6 @@ body {
   line-height: 1.1;
 }
 
-/* TEXT COLORS (SCOPED – NO LEAK) */
 .hero-black {
   color: #111;
 }
@@ -125,7 +119,6 @@ body {
   font-weight: 700;
 }
 
-/* RIGHT IMAGE */
 .hero-right {
   width: 45%;
   background: #ffffff;
@@ -136,10 +129,53 @@ body {
 
 .hero-right img {
   width: 100%;
-  max-height: 420px;      /* CONTROL IMAGE SIZE */
+  max-height: 420px;
   object-fit: cover;
   border-radius: 28px;
-  display: block;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 22px 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.service-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
 }
 
 /* ================= MOBILE ================= */
@@ -151,7 +187,6 @@ body {
 
   .hero {
     flex-direction: column;
-    margin: 40px auto;
     gap: 30px;
   }
 
@@ -169,70 +204,6 @@ body {
     font-size: 26px;
   }
 
-  .navbar-logo {
-    width: 70px;
-    height: 70px;
-  }
-
-  .navbar-logo img {
-    width: 46px;
-  }
-}
-/* ================= SERVICES ================= */
-.services {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.services-title {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #111;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-}
-
-/* CARD */
-.service-card {
-  background: #ffffff;
-  border-radius: 26px;
-  padding: 22px 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-}
-
-.service-card img {
-  width: 100%;
-  max-height: 160px;
-  object-fit: cover;
-  border-radius: 18px;
-  margin-bottom: 16px;
-}
-
-.service-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #111;
-}
-
-.service-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.4;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 900px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -242,4 +213,4 @@ body {
   .services-grid {
     grid-template-columns: 1fr;
   }
-  }
+}
