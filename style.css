@@ -78,6 +78,7 @@ body {
 
 .hero-text-box h1 {
   font-size: 26px;
+  font-weight: 600;
 }
 
 .hero-gold {
@@ -129,7 +130,11 @@ body {
 }
 
 .about-image { width: 45%; }
-.about-image img { width: 100%; border-radius: 28px; }
+
+.about-image img {
+  width: 100%;
+  border-radius: 28px;
+}
 
 .about-text-box {
   width: 50%;
@@ -153,34 +158,55 @@ body {
   margin: 80px auto;
 }
 
-.team-container {
+.team-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.team-content {
   display: flex;
   gap: 50px;
 }
 
-.team-image { width: 45%; }
-.team-image img {
-  width: 100%;
-  border-radius: 28px;
-  transition: 0.4s;
+.team-photos {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.team-text { width: 50%; }
+.team-photo {
+  width: 100%;
+  border-radius: 28px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-.team-btn {
-  background: #111;
-  color: #fff;
-  padding: 12px 26px;
-  border-radius: 30px;
-  border: none;
+.team-photo.active {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.team-text-box {
+  width: 50%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 26px;
+}
+
+.team-text-box p {
+  font-size: 26px;
+  font-weight: 600;
 }
 
 /* MOBILE */
 @media (max-width:900px) {
-  .hero, .about-content, .team-container {
+  .hero, .about-content, .team-content {
     flex-direction: column;
   }
   .services-grid {
     grid-template-columns: repeat(2,1fr);
   }
-    }
+}
