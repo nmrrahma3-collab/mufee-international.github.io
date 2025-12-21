@@ -109,23 +109,23 @@
 <!-- ================= TEAM ================= -->
 <section class="team">
 
-  <div class="team-container">
+  <h2 class="team-title">Our Team</h2>
 
-    <div class="team-image">
-      <img id="teamPhoto" src="founder.png">
-      <div class="team-info">
-        <h3 id="teamName">Founder & CEO</h3>
-        <p id="teamRole">Leadership & Strategic Direction</p>
-      </div>
+  <div class="team-content">
+
+    <!-- LEFT : PHOTOS -->
+    <div class="team-photos">
+      <img src="founder.png" class="team-photo active" onclick="showFounder()">
+      <img src="director.png" class="team-photo" onclick="showDirector()">
     </div>
 
-    <div class="team-text">
-      <h2>Our Team</h2>
-      <p>
-        Our leadership team brings experience and commitment to building
+    <!-- RIGHT : TEXT -->
+    <div class="team-text-box">
+      <p id="teamText">
+        Our leadership drives Mufee International with a clear vision, strategic
+        direction, and a commitment to building
         <span class="gold">trusted global cosmetic solutions</span>.
       </p>
-      <button class="team-btn" onclick="nextMember()">View Next</button>
     </div>
 
   </div>
@@ -134,33 +134,23 @@
 
 <!-- ================= SCRIPT ================= -->
 <script>
-let teamIndex = 0;
+function showFounder() {
+  document.getElementById("teamText").innerHTML =
+    'Our leadership drives Mufee International with a clear vision, strategic direction, and a commitment to building <span class="gold">trusted global cosmetic solutions</span>.';
+  setActive(0);
+}
 
-const teamMembers = [
-  {
-    img: "founder.png",
-    name: "Founder & CEO",
-    role: "Leadership & Strategic Direction"
-  },
-  {
-    img: "director.png",
-    name: "Director",
-    role: "Operations & Global Partnerships"
-  }
-];
+function showDirector() {
+  document.getElementById("teamText").innerHTML =
+    'Our operations and partnerships are managed with precision, ensuring reliability, compliance, and sustainable growth across global markets.';
+  setActive(1);
+}
 
-function nextMember() {
-  teamIndex = (teamIndex + 1) % teamMembers.length;
-
-  const photo = document.getElementById("teamPhoto");
-  photo.style.transform = "translateX(40px)";
-
-  setTimeout(() => {
-    photo.src = teamMembers[teamIndex].img;
-    document.getElementById("teamName").innerText = teamMembers[teamIndex].name;
-    document.getElementById("teamRole").innerText = teamMembers[teamIndex].role;
-    photo.style.transform = "translateX(0)";
-  }, 200);
+function setActive(index) {
+  const photos = document.querySelectorAll(".team-photo");
+  photos.forEach((p, i) => {
+    p.classList.toggle("active", i === index);
+  });
 }
 </script>
 
