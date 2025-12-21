@@ -1,4 +1,3 @@
-/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +8,9 @@
 body {
   background: #f7f7f7;
   color: #111;
-  overflow-x: hidden;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar {
   padding: 20px;
 }
@@ -20,16 +18,14 @@ body {
 .navbar-inner {
   max-width: 1100px;
   margin: auto;
-  background: #ffffff;
+  background: #fff;
   border-radius: 60px;
   padding: 14px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* LOGO */
 .navbar-logo {
   width: 80px;
   height: 80px;
@@ -42,11 +38,9 @@ body {
 
 .navbar-logo img {
   width: 52px;
-  height: auto;
   border-radius: 50%;
 }
 
-/* MENU */
 .navbar-menu {
   display: flex;
   gap: 28px;
@@ -55,67 +49,35 @@ body {
 .navbar-menu a {
   text-decoration: none;
   color: #111;
-  font-weight: 500;
-  position: relative;
 }
 
-.navbar-menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #c9a24d;
-  transition: 0.3s;
-}
-
-.navbar-menu a:hover::after {
-  width: 100%;
-}
-
-/* CONTACT BUTTON */
 .navbar-contact {
   background: #111;
   color: #fff;
   padding: 12px 26px;
   border-radius: 30px;
   text-decoration: none;
-  font-size: 14px;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
   max-width: 1100px;
   margin: 60px auto;
   padding: 0 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 50px;
 }
 
-/* LEFT TEXT */
-.hero-left {
-  width: 50%;
-}
+.hero-left { width: 50%; }
 
 .hero-text-box {
-  background: #ffffff;
+  background: #fff;
   padding: 26px 34px;
   border-radius: 26px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .hero-text-box h1 {
-  margin: 4px 0;
   font-size: 26px;
-  font-weight: 600;
-  line-height: 1.1;
-}
-
-.hero-black {
-  color: #111;
 }
 
 .hero-gold {
@@ -124,157 +86,101 @@ body {
   font-weight: 700;
 }
 
-/* RIGHT IMAGE — NO BACKGROUND */
-.hero-right {
-  width: 45%;
-}
+.hero-right { width: 45%; }
 
 .hero-right img {
   width: 100%;
-  max-height: 420px;
-  object-fit: cover;
   border-radius: 28px;
-  display: block;
 }
 
-/* ================= SERVICES ================= */
+/* SERVICES */
 .services {
   max-width: 1100px;
   margin: 80px auto;
-  padding: 0 20px;
   text-align: center;
-}
-
-.services-title {
-  font-size: 32px;
-  margin-bottom: 40px;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5,1fr);
   gap: 20px;
 }
 
 .service-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 26px;
-  padding: 22px 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  padding: 20px;
 }
 
 .service-card img {
   width: 100%;
-  max-height: 160px;
-  object-fit: cover;
   border-radius: 18px;
-  margin-bottom: 16px;
 }
 
-.service-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.service-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* ================= ABOUT ================= */
+/* ABOUT */
 .about {
   max-width: 1100px;
   margin: 80px auto;
-  padding: 0 20px;
-}
-
-.about-title {
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #111;
 }
 
 .about-content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 50px;
 }
 
-/* IMAGE — SAME STYLE AS HERO (NO BACKGROUND) */
-.about-image {
-  width: 45%;
-}
+.about-image { width: 45%; }
+.about-image img { width: 100%; border-radius: 28px; }
 
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 28px;
-  display: block;
-}
-
-/* TEXT RIGHT */
 .about-text-box {
   width: 50%;
-  background: #ffffff;
-  padding: 30px 36px;
+  background: #fff;
+  padding: 30px;
   border-radius: 26px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .about-text {
   font-size: 26px;
-  line-height: 1.2;
-  font-weight: 600;
-  color: #111;
 }
 
-.about-text .gold {
+.gold {
   color: #c9a24d;
-  font-size: 30px;
   font-weight: 700;
 }
 
-    
-/* ================= MOBILE ================= */
-@media (max-width: 900px) {
-
-  .navbar-menu {
-    display: none;
-  }
-
-  .hero,
-  .about-content {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .hero-left,
-  .hero-right,
-  .about-image,
-  .about-text-box {
-    width: 100%;
-  }
-
-  .hero-text-box h1,
-  .about-text {
-    font-size: 22px;
-  }
-
-  .hero-gold,
-  .about-text .gold {
-    font-size: 26px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* TEAM */
+.team {
+  max-width: 1100px;
+  margin: 80px auto;
 }
 
-@media (max-width: 500px) {
+.team-container {
+  display: flex;
+  gap: 50px;
+}
+
+.team-image { width: 45%; }
+.team-image img {
+  width: 100%;
+  border-radius: 28px;
+  transition: 0.4s;
+}
+
+.team-text { width: 50%; }
+
+.team-btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+}
+
+/* MOBILE */
+@media (max-width:900px) {
+  .hero, .about-content, .team-container {
+    flex-direction: column;
+  }
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2,1fr);
   }
-  }
+    }
