@@ -69,13 +69,13 @@ body {
   margin-bottom: 60px;
 }
 
+/* ===== ABOUT / TEAM ===== */
 .section-content {
   display: flex;
   gap: 60px;
   align-items: center;
 }
 
-/* IMAGE */
 .section-image {
   width: 45%;
 }
@@ -85,8 +85,40 @@ body {
   border-radius: 30px;
 }
 
-/* TEAM IMAGES */
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 26px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.service-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== TEAM ===== */
 .team-images {
+  width: 45%;
   display: flex;
   gap: 20px;
 }
@@ -110,7 +142,12 @@ body {
 
   .hero-left,
   .hero-right,
-  .section-image {
+  .section-image,
+  .team-images {
     width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
