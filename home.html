@@ -2,157 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mufee International</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mufee International</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ================= NAV BAR ================= -->
 <header class="navbar">
-  <div class="navbar-inner">
-
-    <div class="navbar-logo">
-      <img src="logo.png" alt="Logo">
-    </div>
-
-    <nav class="navbar-menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-
-    <a href="#" class="navbar-contact">Contact</a>
-
-  </div>
+  <img src="logo.png" class="logo" alt="Logo">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-
   <div class="hero-left">
     <div class="hero-text-box">
-      <h1 class="hero-black">We Build Excellence Through Solutions</h1>
-      <h1 class="hero-gold">Designed for Global Businesses</h1>
-      <h1 class="hero-black">Driven by Innovation and Trust</h1>
+      <h1>
+        <span class="black">We Build</span><br>
+        <span class="gold">Global Cosmetic</span><br>
+        <span class="black">Solutions</span>
+      </h1>
+      <p>
+        Trusted global cosmetic import and distribution solutions
+        built with quality, reliability, and long-term vision.
+      </p>
     </div>
   </div>
 
   <div class="hero-right">
     <img src="hero.png" alt="Hero Image">
   </div>
-
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="services">
-
-  <h2 class="services-title">Our Services</h2>
-
-  <div class="services-grid">
-    <div class="service-card">
-      <img src="service1.png">
-      <h3>Global Cosmetic Import</h3>
-      <p>International sourcing of cosmetic products.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="service2.png">
-      <h3>Distribution Network</h3>
-      <p>Efficient supply chain solutions.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="service3.png">
-      <h3>Quality Assurance</h3>
-      <p>Meeting global quality standards.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="service4.png">
-      <h3>Regulatory Compliance</h3>
-      <p>Documentation and import support.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="service5.png">
-      <h3>Brand Expansion</h3>
-      <p>Helping brands grow internationally.</p>
-    </div>
-  </div>
-
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="about">
+<section class="about-section">
 
-  <h2 class="about-title">About Mufee International</h2>
+  <h2 class="section-title">About Us</h2>
 
   <div class="about-content">
-
     <div class="about-image">
-      <img src="about.png">
+      <img src="about.png" alt="About Image">
     </div>
 
-    <div class="about-text-box">
-      <p class="about-text">
-        We build <span class="gold">excellence through global cosmetic solutions</span>,
-        delivering trust, quality, and innovation for modern businesses.
+    <div class="about-text">
+      <h3>
+        <span class="black">We Build</span>
+        <span class="gold">Excellence</span>
+      </h3>
+      <p>
+        Mufee International is driven by strong leadership,
+        strategic direction, and a commitment to delivering
+        trusted global cosmetic solutions with consistency
+        and integrity.
       </p>
     </div>
-
   </div>
+
 </section>
 
 <!-- ================= TEAM ================= -->
-<section class="team">
+<section class="team-section">
 
-  <h2 class="team-title">Our Team</h2>
+  <h2 class="section-title">Our Team</h2>
 
   <div class="team-content">
 
-    <!-- LEFT : PHOTOS -->
     <div class="team-photos">
-      <img src="founder.png" class="team-photo active" onclick="showFounder()">
-      <img src="director.png" class="team-photo" onclick="showDirector()">
+      <img src="founder.png" alt="Founder">
+      <img src="director.png" alt="Director">
     </div>
 
-    <!-- RIGHT : TEXT -->
     <div class="team-text-box">
-      <p id="teamText">
-        Our leadership drives Mufee International with a clear vision, strategic
-        direction, and a commitment to building
-        <span class="gold">trusted global cosmetic solutions</span>.
+      <h3>
+        <span class="black">We Build</span>
+        <span class="gold">Strong Leadership</span>
+      </h3>
+      <p>
+        Our leadership team combines experience, vision,
+        and responsibility to guide Mufee International
+        toward sustainable growth and trusted partnerships
+        worldwide.
       </p>
     </div>
 
   </div>
-
 </section>
-
-<!-- ================= SCRIPT ================= -->
-<script>
-function showFounder() {
-  document.getElementById("teamText").innerHTML =
-    'Our leadership drives Mufee International with a clear vision, strategic direction, and a commitment to building <span class="gold">trusted global cosmetic solutions</span>.';
-  setActive(0);
-}
-
-function showDirector() {
-  document.getElementById("teamText").innerHTML =
-    'Our operations and partnerships are managed with precision, ensuring reliability, compliance, and sustainable growth across global markets.';
-  setActive(1);
-}
-
-function setActive(index) {
-  const photos = document.querySelectorAll(".team-photo");
-  photos.forEach((p, i) => {
-    p.classList.toggle("active", i === index);
-  });
-}
-</script>
 
 </body>
 </html>
