@@ -18,7 +18,7 @@
     </div>
 
     <nav class="navbar-menu">
-      <a href="home.html">Home</a>
+      <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
@@ -28,8 +28,6 @@
 
   </div>
 </header>
-<!-- ================= END NAVBAR ================= -->
-
 
 <!-- ================= HERO ================= -->
 <section class="hero">
@@ -47,8 +45,6 @@
   </div>
 
 </section>
-<!-- ================= END HERO ================= -->
-
 
 <!-- ================= SERVICES ================= -->
 <section class="services">
@@ -56,57 +52,50 @@
   <h2 class="services-title">Our Services</h2>
 
   <div class="services-grid">
-
     <div class="service-card">
-      <img src="service1.png" alt="Service 1">
+      <img src="service1.png">
       <h3>Global Cosmetic Import</h3>
       <p>International sourcing of cosmetic products.</p>
     </div>
 
     <div class="service-card">
-      <img src="service2.png" alt="Service 2">
+      <img src="service2.png">
       <h3>Distribution Network</h3>
-      <p>Efficient supply chain and delivery support.</p>
+      <p>Efficient supply chain solutions.</p>
     </div>
 
     <div class="service-card">
-      <img src="service3.png" alt="Service 3">
+      <img src="service3.png">
       <h3>Quality Assurance</h3>
-      <p>Meeting global cosmetic quality standards.</p>
+      <p>Meeting global quality standards.</p>
     </div>
 
     <div class="service-card">
-      <img src="service4.png" alt="Service 4">
+      <img src="service4.png">
       <h3>Regulatory Compliance</h3>
-      <p>Import documentation and legal support.</p>
+      <p>Documentation and import support.</p>
     </div>
 
     <div class="service-card">
-      <img src="service5.png" alt="Service 5">
+      <img src="service5.png">
       <h3>Brand Expansion</h3>
-      <p>Helping brands grow in global markets.</p>
+      <p>Helping brands grow internationally.</p>
     </div>
-
   </div>
 
 </section>
-<!-- ================= END SERVICES ================= -->
-
 
 <!-- ================= ABOUT ================= -->
-
 <section class="about">
 
   <h2 class="about-title">About Mufee International</h2>
 
   <div class="about-content">
 
-    <!-- LEFT IMAGE -->
     <div class="about-image">
-      <img src="about.png" alt="About Mufee International">
+      <img src="about.png">
     </div>
 
-    <!-- RIGHT TEXT -->
     <div class="about-text-box">
       <p class="about-text">
         We build <span class="gold">excellence through global cosmetic solutions</span>,
@@ -115,38 +104,65 @@
     </div>
 
   </div>
-
 </section>
-<!-- ================= END ABOUT ================= -->
 
-  
 <!-- ================= TEAM ================= -->
 <section class="team">
 
   <div class="team-container">
 
-    <!-- LEFT : IMAGE SLIDER -->
     <div class="team-image">
-      <img id="teamPhoto" src="founder.png" alt="Team Member">
+      <img id="teamPhoto" src="founder.png">
       <div class="team-info">
         <h3 id="teamName">Founder & CEO</h3>
         <p id="teamRole">Leadership & Strategic Direction</p>
       </div>
     </div>
 
-    <!-- RIGHT : TEXT -->
     <div class="team-text">
       <h2>Our Team</h2>
       <p>
-        Our leadership team combines experience, vision, and commitment to
-        building trusted <span class="gold">global cosmetic solutions</span>.
+        Our leadership team brings experience and commitment to building
+        <span class="gold">trusted global cosmetic solutions</span>.
       </p>
-      <button onclick="nextMember()" class="team-btn">View Next</button>
+      <button class="team-btn" onclick="nextMember()">View Next</button>
     </div>
 
   </div>
 
 </section>
-<!-- ================= END TEAM ================= -->
+
+<!-- ================= SCRIPT ================= -->
+<script>
+let teamIndex = 0;
+
+const teamMembers = [
+  {
+    img: "founder.png",
+    name: "Founder & CEO",
+    role: "Leadership & Strategic Direction"
+  },
+  {
+    img: "director.png",
+    name: "Director",
+    role: "Operations & Global Partnerships"
+  }
+];
+
+function nextMember() {
+  teamIndex = (teamIndex + 1) % teamMembers.length;
+
+  const photo = document.getElementById("teamPhoto");
+  photo.style.transform = "translateX(40px)";
+
+  setTimeout(() => {
+    photo.src = teamMembers[teamIndex].img;
+    document.getElementById("teamName").innerText = teamMembers[teamIndex].name;
+    document.getElementById("teamRole").innerText = teamMembers[teamIndex].role;
+    photo.style.transform = "translateX(0)";
+  }, 200);
+}
+</script>
+
 </body>
 </html>
