@@ -10,21 +10,48 @@ body {
   color: #111;
 }
 
+/* ===== NAVBAR ===== */
+.navbar {
+  padding: 20px 0;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border-radius: 60px;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+.nav-logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+}
+
 /* ===== HERO ===== */
 .hero {
   max-width: 1200px;
   margin: 80px auto;
+  padding: 0 20px;
   display: flex;
   gap: 60px;
   align-items: center;
-  padding: 0 20px;
 }
-
-.hero-left,
-.hero-right {
-  width: 50%;
-}
-
+.hero-left, .hero-right { width: 50%; }
 .hero-right img {
   width: 100%;
   border-radius: 30px;
@@ -37,18 +64,15 @@ body {
   border-radius: 26px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
-
 .hero-text-box h1 {
   font-size: 36px;
   line-height: 1.2;
   margin-bottom: 14px;
 }
-
 .hero-text-box h3 {
   font-size: 32px;
   margin-bottom: 14px;
 }
-
 .hero-text-box p {
   font-size: 16px;
   line-height: 1.7;
@@ -61,7 +85,6 @@ body {
   margin: 120px auto;
   padding: 0 20px;
 }
-
 .section-title {
   text-align: center;
   font-size: 38px;
@@ -69,29 +92,26 @@ body {
   margin-bottom: 60px;
 }
 
-/* ===== ABOUT / TEAM ===== */
+/* CONTENT LAYOUT */
 .section-content {
   display: flex;
   gap: 60px;
   align-items: center;
 }
 
-.section-image {
-  width: 45%;
-}
-
+/* IMAGES */
+.section-image { width: 45%; }
 .section-image img {
   width: 100%;
   border-radius: 30px;
 }
 
-/* ===== SERVICES ===== */
+/* SERVICES */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
-
 .service-card {
   background: #fff;
   padding: 20px;
@@ -99,30 +119,26 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   text-align: center;
 }
-
 .service-card img {
   width: 100%;
   border-radius: 20px;
   margin-bottom: 12px;
 }
-
 .service-card h4 {
   font-size: 18px;
   margin-bottom: 8px;
 }
-
 .service-card p {
   font-size: 14px;
   color: #555;
 }
 
-/* ===== TEAM ===== */
+/* TEAM */
 .team-images {
   width: 45%;
   display: flex;
   gap: 20px;
 }
-
 .team-images img {
   width: 100%;
   border-radius: 26px;
@@ -134,20 +150,8 @@ body {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
-  .hero,
-  .section-content {
-    flex-direction: column;
-  }
-
-  .hero-left,
-  .hero-right,
-  .section-image,
-  .team-images {
-    width: 100%;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .nav-menu { display: none; }
+  .hero, .section-content { flex-direction: column; }
+  .hero-left, .hero-right, .section-image, .team-images { width: 100%; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
