@@ -34,17 +34,29 @@ body {
   margin-bottom: 10px;
 }
 
+  
+/* Oval Menu Items */
 .nav a {
-  margin: 0 15px;
+  padding: 8px 16px;
+  margin: 0 6px;
   font-size: 14px;
-  color: #444;
+  color: #333;
   text-decoration: none;
+  border-radius: 999px; /* oval shape */
+  transition: all 0.25s ease;
 }
 
-.nav .active {
-  border-bottom: 2px solid #000;
-  padding-bottom: 4px;
+/* Hover effect */
+.nav a:hover {
+  background: rgba(0, 0, 0, 0.06);
 }
+
+/* Active menu */
+.nav a.active {
+  background: #000;
+  color: #fff;
+}
+  
 
 /* Header WhatsApp Button */
 .header-whatsapp-btn {
