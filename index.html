@@ -65,7 +65,8 @@
 
   <!-- OUR BRANDS -->
   <section class="brands">
-    <h3>Our Brands</h3>
+    <h2 class="section-title scroll-reveal">Our Brands</h2>
+    <h2>Our Brands</h2>
 
     <div class="brand-grid">
       <div class="brand-card">
@@ -93,7 +94,8 @@
 
   <!-- NATIONWIDE -->
   <section class="nationwide">
-    <h3>Nationwide Distribution</h3>
+    <h2 class="section-title scroll-reveal">Nationwide Distribution</h2>
+    <h2>Nationwide Distribution</h2>
 
     <div class="nation-grid">
       <div>🏪 Retail Supply</div>
@@ -105,7 +107,8 @@
 
   <!-- WHY MUFEE -->
   <section class="why">
-    <h3>Wholesale Partners</h3>
+    <h2 class="section-title scroll-reveal">Wholesale Partners</h2>
+    <h2>Wholesale Partners</h2>
 
     <div class="why-grid">
       <div>
@@ -166,5 +169,22 @@
     </div>
   </footer>
 
+  <script>
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+  </script>
+  
 </body>
 </html>
