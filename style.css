@@ -305,6 +305,36 @@ body {
 .brand-card:nth-child(3) { transition-delay: 0.4s; }
 
 
+/* ===== Nationwide Horizontal Scroll ===== */
+.nationwide {
+  padding: 80px 6%;
+}
+
+.nation-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nation-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.nation-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.nation-scroll .brand-card {
+  min-width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+
 /* =========================
    APPLE-STYLE ANIMATIONS
    ========================= */
