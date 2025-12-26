@@ -113,6 +113,17 @@ body {
   margin: 0 6px;
 }
 
+/* ==============================
+   SECTION TITLES (GLOBAL)
+============================== */
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 /* OUR BRANDS */
 .brands {
   padding: 70px 20px;
