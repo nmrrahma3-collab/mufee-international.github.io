@@ -445,3 +445,81 @@ body {
 .footer-links a:hover {
   opacity: 0.7;
 }
+
+/* =========================
+   MOBILE HEADER FIX
+========================= */
+@media (max-width: 768px) {
+
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav a {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .header-whatsapp-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   MOBILE HERO FIX
+========================= */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .hero-left,
+  .hero-right {
+    display: none; /* hide side images on mobile */
+  }
+
+  .hero-center h1 {
+    font-size: 34px;
+  }
+
+  .hero-center h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .hero-center p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
