@@ -305,6 +305,7 @@ body {
 .brand-card:nth-child(3) { transition-delay: 0.4s; }
 
 
+
 /* ===== Nationwide Horizontal Scroll ===== */
 .nationwide {
   padding: 80px 6%;
@@ -329,8 +330,7 @@ body {
 }
 
 .nation-scroll .brand-card {
-  min-width: 280px;
-  flex: 0 0 auto;
+  flex: 0 0 calc(33.333% - 16px);
   scroll-snap-align: start;
 }
 
