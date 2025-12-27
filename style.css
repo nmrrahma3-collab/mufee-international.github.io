@@ -729,3 +729,25 @@ body {
 .social-link:hover::after {
   width: 100%;
 }
+
+  /* =========================
+   PRIVACY POLICY & TERMS
+========================= */
+
+.policy {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.policy h3 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.policy p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
