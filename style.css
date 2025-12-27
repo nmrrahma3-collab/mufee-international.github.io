@@ -229,6 +229,15 @@ body {
   text-align: center;
 }
 
+.nation-card h4 {
+  margin-top: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.nation-card p {
+  font-size: 14px;
+  color: #555;
+}
 
 /* FOOTER */
 .footer {
