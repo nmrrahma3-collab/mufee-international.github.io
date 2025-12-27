@@ -261,6 +261,33 @@
 
   autoScrollNationwide();
   </script>
+
+  
+  <script>
+  const wholesaleScroll = document.querySelector('.wholesale-scroll');
+
+  let wholesalePos = 0;
+  let wholesaleSpeed = 0.25;
+
+  function autoScrollWholesale() {
+    if (!wholesaleScroll) return;
+
+    wholesalePos += wholesaleSpeed;
+    wholesaleScroll.scrollLeft = wholesalePos;
+
+    if (
+      wholesaleScroll.scrollLeft + wholesaleScroll.clientWidth >=
+      wholesaleScroll.scrollWidth
+    ) {
+      wholesalePos = 0;
+    }
+
+    requestAnimationFrame(autoScrollWholesale);
+  }
+
+  autoScrollWholesale();
+  </script>
+
   
 </body>
 </html>
