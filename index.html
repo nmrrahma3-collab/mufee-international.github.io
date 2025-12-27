@@ -151,7 +151,7 @@
         <p>Islandwide delivery and logistics support.</p>
       </div>
 
-      <!-- Set 2 (DUPLICATE FOR INFINITE LOOP) -->
+      <!-- Set 2 (DUPLICATE FOR LOOP) -->
       <div class="nation-card">
         <img src="nation1.png" alt="Retail Supply">
         <h4>Retail Supply</h4>
@@ -296,7 +296,7 @@
   const nationScroll = document.querySelector('.nation-scroll');
 
   let scrollAmount = 0;
-  let scrollSpeed = 0.4; // slower = smoother
+  let scrollSpeed = 0.25; 
 
   function autoScrollNationwide() {
     if (!nationScroll) return;
@@ -304,7 +304,7 @@
     scrollAmount += scrollSpeed;
     nationScroll.scrollLeft = scrollAmount;
 
-    // When reached end → reset smoothly
+    
     if (
       nationScroll.scrollLeft + nationScroll.clientWidth >=
       nationScroll.scrollWidth
