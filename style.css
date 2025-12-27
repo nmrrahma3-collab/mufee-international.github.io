@@ -357,11 +357,18 @@ body {
 .nation-scroll {
   display: flex;
   gap: 24px;
-  overflow-x: auto;
+  overflow-x: scroll;
   padding-bottom: 20px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE */
 }
+
+/* Hide scrollbar (Chrome, Safari) */
+.nation-scroll::-webkit-scrollbar {
+  display: none;
+  }
+
 
 .nation-scroll::-webkit-scrollbar {
   height: 6px;
