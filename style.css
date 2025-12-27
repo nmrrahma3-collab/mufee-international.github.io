@@ -367,6 +367,15 @@ body {
   margin-bottom: 40px;
 }
 
+/* 👉 PASTE HERE */
+.nation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
 .nation-card {
   background: #fff;
   padding: 14px;
@@ -381,7 +390,6 @@ body {
   object-fit: cover;
   border-radius: 12px;
 }
-
 
 /* =========================
    APPLE-STYLE ANIMATIONS
