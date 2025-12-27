@@ -235,6 +235,32 @@
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
   </script>
+
+  <script>
+  const nationScroll = document.querySelector('.nation-scroll');
+
+  let scrollAmount = 0;
+  let scrollSpeed = 0.4; // slower = smoother
+
+  function autoScrollNationwide() {
+    if (!nationScroll) return;
+
+    scrollAmount += scrollSpeed;
+    nationScroll.scrollLeft = scrollAmount;
+
+    // When reached end → reset smoothly
+    if (
+      nationScroll.scrollLeft + nationScroll.clientWidth >=
+      nationScroll.scrollWidth
+    ) {
+      scrollAmount = 0;
+    }
+
+    requestAnimationFrame(autoScrollNationwide);
+  }
+
+  autoScrollNationwide();
+  </script>
   
 </body>
 </html>
