@@ -382,31 +382,6 @@ body {
   border-radius: 12px;
 }
 
-/* ===== Fade Edge Effect ===== */
-.fade-edges {
-  position: relative;
-}
-
-.fade-edges::before,
-.fade-edges::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.fade-edges::before {
-  left: 0;
-  background: linear-gradient(to right, #f6f6f6, transparent);
-}
-
-.fade-edges::after {
-  right: 0;
-  background: linear-gradient(to left, #f6f6f6, transparent);
-}
 
 /* =========================
    APPLE-STYLE ANIMATIONS
