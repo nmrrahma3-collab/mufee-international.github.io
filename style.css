@@ -691,4 +691,10 @@ body {
     transform: translateY(0);
   }
 }
-
+  
+/* ===== NATIONWIDE HARD RESET (STOP ALL HOVER & TRANSITIONS) ===== */
+.nationwide *,
+.nation-card {
+  transition: none !important;
+  transform: none !important;
+}
