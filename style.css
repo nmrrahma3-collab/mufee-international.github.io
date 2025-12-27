@@ -353,9 +353,8 @@ body {
   margin: 0;
 }
 
-
 /* =========================
-   NATIONWIDE AUTO SCROLL (FINAL)
+   NATIONWIDE (NO ANIMATION)
 ========================= */
 
 .nationwide {
@@ -368,24 +367,10 @@ body {
   margin-bottom: 40px;
 }
 
-.nation-scroll {
-  overflow: hidden;
-  width: 100%;
-  padding: 30px 0;
-}
-
-.nation-track {
-  display: flex;
-  gap: 24px;
-  width: max-content;
-  animation: nationScroll 25s linear infinite;
-}
-
 .nation-card {
   background: #fff;
   padding: 14px;
   border-radius: 16px;
-  min-width: 260px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   text-align: center;
 }
@@ -395,11 +380,6 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
-}
-
-@keyframes nationScroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
 }
 
 /* ===== Fade Edge Effect ===== */
