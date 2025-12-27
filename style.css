@@ -215,6 +215,19 @@ body {
   color: #000;
 }
 
+/* ===== NATIONWIDE GRID (LIKE OUR BRANDS) ===== */
+.nation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Reuse brand card styling */
+.nation-card {
+  text-align: center;
+}
 
 
 /* FOOTER */
