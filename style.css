@@ -270,18 +270,7 @@ body {
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Why MUFEE / Wholesale images */
-.why-grid div {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
 
-.why-grid div:hover {
-  transform: translateY(-6px);
-}
-
-.why-grid div:hover img {
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
-}
 
 /* ===== SCROLL FADE-IN ANIMATION ===== */
 .scroll-reveal {
