@@ -215,25 +215,7 @@ body {
   color: #000;
 }
 
-/* NATIONWIDE */
-.nationwide {
-  padding: 70px 20px;
-  background: #f1efec;
-  text-align: center;
-}
 
-.nationwide h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 25px;
-}
-
-.nation-grid {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  max-width: 1000px;
-  margin: auto;
-  font-size: 14px;
-}
 
 /* WHY MUFEE */
 .why {
@@ -347,12 +329,16 @@ body {
 .brand-card:nth-child(2) { transition-delay: 0.25s; }
 .brand-card:nth-child(3) { transition-delay: 0.4s; }
 
-
-
-/* ===== Nationwide Auto Scroll (SAME AS WHOLESALE) ===== */
+/* ===== Nationwide Continuous Auto Scroll ===== */
 
 .nationwide {
   padding: 80px 6%;
+  background: #fafafa;
+}
+
+.nationwide .section-title {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .nation-scroll {
@@ -363,21 +349,33 @@ body {
 .nation-track {
   display: flex;
   gap: 24px;
-  animation: scrollLeft 32s linear infinite;
+  width: max-content;
+  animation: nationScroll 28s linear infinite;
 }
 
 .nation-card {
-  min-width: 300px;
+  min-width: 260px;
   background: #fff;
-  border-radius: 18px;
-  padding: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  text-align: center;
 }
 
 .nation-card img {
   width: 100%;
-  border-radius: 14px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
 }
+
+@keyframes nationScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+    }
+
+/* ===== Nationwide Auto Scroll (SAME AS WHOLESALE) ===== */
+
 
 
 /* ===== Wholesale Horizontal Scroll ===== */
@@ -490,10 +488,7 @@ body {
   }
 }
 
-/* Optional: pause on hover */
-.nation-scroll:hover .nation-track {
-  animation-play-state: paused;
-}
+
 
 /* ===== Fade Edge Effect ===== */
 .fade-edges {
