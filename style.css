@@ -385,6 +385,31 @@ body {
 }
 
 
+/* ===== Wholesale Horizontal Scroll ===== */
+.wholesale {
+  padding: 80px 6%;
+}
+
+.wholesale-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.wholesale-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.wholesale-scroll .brand-card {
+  flex: 0 0 calc(33.333% - 16px);
+  scroll-snap-align: start;
+}
+
 
 /* =========================
    APPLE-STYLE ANIMATIONS
