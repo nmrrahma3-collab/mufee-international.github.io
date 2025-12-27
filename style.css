@@ -218,34 +218,7 @@ body {
 
 
 /* WHY MUFEE */
-.why {
-  padding: 70px 20px;
-  text-align: center;
-}
 
-.why h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 35px;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.why-grid img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-.why-grid p {
-  margin-top: 8px;
-  font-size: 14px;
-}
 
 /* FOOTER */
 .footer {
