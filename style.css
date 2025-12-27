@@ -349,39 +349,34 @@ body {
 
 
 
-/* ===== Nationwide Horizontal Scroll ===== */
+/* ===== Nationwide Auto Scroll (SAME AS WHOLESALE) ===== */
+
 .nationwide {
   padding: 80px 6%;
 }
 
 .nation-scroll {
+  overflow: hidden;
+  width: 100%;
+}
+
+.nation-track {
   display: flex;
   gap: 24px;
-  overflow-x: scroll;
-  padding-bottom: 20px;
-  scroll-behavior: smooth;
-  scrollbar-width: none;      /* Firefox */
-  -ms-overflow-style: none;   /* IE */
+  animation: scrollLeft 32s linear infinite;
 }
 
-/* Hide scrollbar (Chrome, Safari) */
-.nation-scroll::-webkit-scrollbar {
-  display: none;
-  }
-
-
-.nation-scroll::-webkit-scrollbar {
-  height: 6px;
+.nation-card {
+  min-width: 300px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 }
 
-.nation-scroll::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-
-.nation-scroll .brand-card {
-  flex: 0 0 calc(33.333% - 16px);
-  scroll-snap-align: start;
+.nation-card img {
+  width: 100%;
+  border-radius: 14px;
 }
 
 
