@@ -1,83 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>FOGG Brand | Mufee International</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="brand.css">
 </head>
+
 <body>
 
-<!-- BRAND HERO -->
-<section class="brand-hero">
-  <h1>FOGG</h1>
-  <p class="brand-tagline">Powering Modern Fragrance Culture</p>
-  <p class="brand-desc">
-    Premium body sprays and perfumes trusted across Sri Lanka for long-lasting freshness and confidence.
-  </p>
-  <div class="hero-buttons">
-    <a class="btn-dark">View Products</a>
-    <a class="btn-light">Wholesale Partnership</a>
-  </div>
-</section>
+  <!-- HEADER (same as home) -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">MUFEE INTERNATIONAL</div>
 
-<!-- BRAND STORY -->
-<section class="brand-story">
-  <h2>The Essence of FOGG</h2>
-  <p>
-    FOGG represents bold identity and long-lasting performance.
-    Distributed by <strong>Mufee International (Pvt) Ltd</strong>,
-    FOGG continues to dominate fragrance shelves nationwide.
-  </p>
-  <blockquote>“FOGG doesn’t fade — it defines.”</blockquote>
-</section>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="brand.html" class="active">Brands</a>
+        <a href="distribution.html">Distribution</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-<!-- PRODUCT GRID -->
-<section class="brands">
-  <h2 class="section-title">FOGG Product Collection</h2>
-  <div class="brand-grid">
-
-    <!-- Repeat this card 12 times -->
-    <div class="brand-card">
-      <img src="fogg1.png" alt="FOGG Product">
-      <h4>FOGG Black</h4>
-      <p>Long-lasting fragrance for everyday confidence.</p>
+      <a class="header-whatsapp-btn" href="https://wa.me/94XXXXXXXXX" target="_blank">
+        WhatsApp
+      </a>
     </div>
+  </header>
 
-  </div>
-</section>
-
-<!-- NATIONWIDE -->
-<section class="nationwide">
-  <h2 class="section-title">Trusted Across Sri Lanka</h2>
-  <div class="nation-grid">
-
-    <div class="nation-card">
-      <h4>Retail Stores</h4>
-      <p>Curated fragrance collections for premium retail outlets.</p>
+  <!-- =========================
+       BRAND HERO
+  ========================= -->
+  <section class="brand-hero">
+    <div class="brand-hero-content">
+      <h1>FOGG.</h1>
+      <h2>Powering Modern Fragrance Culture</h2>
+      <p>
+        Premium body sprays and perfumes trusted across Sri Lanka for
+        long-lasting freshness, confidence, and bold identity.
+      </p>
     </div>
+  </section>
 
-    <div class="nation-card">
-      <h4>Supermarkets</h4>
-      <p>Supplying leading supermarket chains islandwide.</p>
+  <!-- =========================
+       ABOUT BRAND
+  ========================= -->
+  <section class="brand-about">
+    <div class="container">
+      <h3>The Essence of FOGG</h3>
+      <p>
+        FOGG represents bold identity and long-lasting performance.
+        Distributed by <strong>Mufee International (Pvt) Ltd</strong>,
+        FOGG continues to dominate fragrance shelves nationwide.
+      </p>
+
+      <blockquote>
+        “FOGG doesn’t fade — it defines.”
+      </blockquote>
     </div>
+  </section>
 
-    <div class="nation-card">
-      <h4>Pharmacies</h4>
-      <p>Certified products meeting strict quality standards.</p>
+  <!-- =========================
+       PRODUCT COLLECTION
+  ========================= -->
+  <section class="brand-products">
+    <h3 class="section-title">FOGG Product Collection</h3>
+
+    <div class="nation-grid">
+      <!-- 12 products (sample 3 for now) -->
+      <div class="nation-card">
+        <img src="images/fogg1.png" alt="FOGG Black">
+        <h4>FOGG Black</h4>
+        <p>Long-lasting fragrance for everyday confidence.</p>
+      </div>
+
+      <div class="nation-card">
+        <img src="images/fogg2.png" alt="FOGG Fresh">
+        <h4>FOGG Fresh</h4>
+        <p>Crisp freshness designed for active lifestyles.</p>
+      </div>
+
+      <div class="nation-card">
+        <img src="images/fogg3.png" alt="FOGG Royal">
+        <h4>FOGG Royal</h4>
+        <p>Bold, masculine notes with premium appeal.</p>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- =========================
+       TRUSTED ACROSS SL
+  ========================= -->
+  <section class="brand-trust">
+    <h3 class="section-title">Trusted Across Sri Lanka</h3>
 
-<!-- WHOLESALE CTA -->
-<section class="wholesale-cta">
-  <h2>Partner With Us</h2>
-  <p>
-    Join our nationwide wholesale distribution network and stock
-    one of Sri Lanka’s most trusted fragrance brands.
-  </p>
-  <a class="btn-dark">Contact Wholesale Team</a>
-</section>
+    <div class="nation-grid">
+      <div class="nation-card">
+        <h4>Retail Stores</h4>
+        <p>Curated fragrance collections supplied to premium retail outlets.</p>
+      </div>
+
+      <div class="nation-card">
+        <h4>Supermarkets</h4>
+        <p>Supplying leading supermarket chains islandwide.</p>
+      </div>
+
+      <div class="nation-card">
+        <h4>Pharmacies</h4>
+        <p>Certified fragrances meeting strict quality standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       WHOLESALE CTA
+  ========================= -->
+  <section class="brand-cta">
+    <h3>Partner With Us</h3>
+    <p>
+      Join our nationwide wholesale distribution network and stock one of
+      Sri Lanka’s most trusted fragrance brands.
+    </p>
+
+    <a href="contact.html" class="btn-dark">Contact Wholesale Team</a>
+  </section>
 
 </body>
-</html>
+  </html>
