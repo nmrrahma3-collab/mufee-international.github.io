@@ -8,12 +8,12 @@
       rgba(255,255,255,0.92)
     ),
     url("images/brand-hero-bg.png") center / cover no-repeat;
-  padding: 120px 20px;
+  padding: 120px 20px 100px;
   text-align: center;
 }
 
 .brand-hero-content {
-  max-width: 820px;
+  max-width: 780px;
   margin: auto;
 }
 
@@ -21,25 +21,24 @@
   font-family: 'Playfair Display', serif;
   font-size: 56px;
   letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
 .brand-hero h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin: 16px 0;
+  font-size: 30px;
+  margin-bottom: 16px;
 }
 
 .brand-hero p {
   font-size: 16px;
   color: #555;
   line-height: 1.8;
-  max-width: 620px;
-  margin: auto;
 }
 
 
 /* =========================
-   PRODUCT COLLECTION
+   PRODUCTS SECTION
 ========================= */
 
 .brands-products {
@@ -51,13 +50,27 @@
   font-family: 'Playfair Display', serif;
   font-size: 34px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 18px;
 }
+
+.brand-line {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
 
 .nation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 26px;
   max-width: 1100px;
   margin: auto;
 }
@@ -68,7 +81,7 @@
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .nation-card:hover {
@@ -97,30 +110,40 @@
 ========================= */
 
 .brand-story {
-  padding: 120px 20px;
+  padding: 100px 20px;
   background: #fafafa;
+}
+
+.brand-story-inner {
+  max-width: 900px;
+  margin: auto;
   text-align: center;
 }
 
 .brand-story .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 44px;
-  margin-bottom: 40px;
+  margin-bottom: 22px;
 }
 
-.brand-line {
-  font-size: 20px;
-  line-height: 1.9;
-  color: #333;
-  max-width: 720px;
-  margin: 0 auto 8px;
+.brand-story .brand-lead {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #222;
 }
 
-.brand-quote {
+.brand-story p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+.brand-story blockquote {
   margin-top: 30px;
   font-family: 'Playfair Display', serif;
-  font-size: 26px;
+  font-size: 22px;
   color: #000;
+  letter-spacing: 1px;
 }
 
 
@@ -129,7 +152,7 @@
 ========================= */
 
 .brand-cta {
-  padding: 110px 20px;
+  padding: 110px 20px 120px;
   background: #000;
   color: #fff;
   text-align: center;
@@ -138,218 +161,51 @@
 .brand-cta h3 {
   font-family: 'Playfair Display', serif;
   font-size: 34px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .brand-cta p {
   max-width: 620px;
-  margin: auto;
+  margin: 0 auto 34px;
   font-size: 15px;
-  color: #ddd;
   line-height: 1.8;
-  margin-bottom: 40px;
+  color: #ddd;
 }
 
-/* BUTTON FIX */
+/* BUTTON FIX — NO OVERLAP */
 .brand-cta .btn-dark {
   display: inline-block;
   background: #fff;
   color: #000;
-  padding: 14px 34px;
+  padding: 14px 32px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   margin-top: 10px;
 }
 
-.brand-cta .btn-dark:hover {
-  background: #f2f2f2;
-}
-
 
 /* =========================
-   FOOTER (SAME AS HOME)
+   SIMPLE FADE TEXT ANIMATION
 ========================= */
 
-.site-footer {
-  background: #f6f4f2;
-  padding: 60px 20px 30px;
+.fade-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-}
+.fade-text:nth-child(1) { animation-delay: 0.1s; }
+.fade-text:nth-child(2) { animation-delay: 0.25s; }
+.fade-text:nth-child(3) { animation-delay: 0.4s; }
 
-.footer-brand h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  color: #555;
-}
-
-.footer-links h5 {
-  font-size: 15px;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 8px;
-}
-
-.footer-links ul li a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #444;
-}
-
-.footer-links ul li a:hover {
-  color: #000;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-}
-
-/* =========================
-   PAGE LOAD ANIMATION
-========================= */
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
+@keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Animate main sections */
-.brand-hero,
-.brands-products,
-.brand-story,
-.brand-cta,
-.footer {
-  animation: fadeSlideUp 0.8s ease-out both;
-}
-
-/* Stagger effect (smooth like Apple) */
-.brands-products { animation-delay: 0.1s; }
-.brand-story { animation-delay: 0.2s; }
-.brand-cta { animation-delay: 0.3s; }
-.footer { animation-delay: 0.4s; }
-
-
-/* =========================
-   PRODUCT CARD HOVER
-========================= */
-
-.nation-card {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.nation-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-}
-
-/* =========================
-   WHOLESALE BUTTON HOVER
-========================= */
-
-.brand-cta .btn-dark {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.brand-cta .btn-dark:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(255,255,255,0.25);
-}
-
-/* =========================
-   TEXT REVEAL ANIMATION
-========================= */
-
-@keyframes textFade {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section-title,
-.brand-story p,
-.brand-story blockquote,
-.brand-hero h1,
-.brand-hero p {
-  animation: textFade 0.9s ease-out both;
-}
-
-/* =========================
-   SOFT ZOOM ANIMATION
-========================= */
-
-@keyframes softZoom {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.brand-hero,
-.nation-card {
-  animation: softZoom 0.8s ease-out both;
-}
-
-/* ===== PURE FADE TEXT ===== */
-.fade-text {
-  opacity: 0;
-  transition: opacity 1.2s ease;
-}
-
-.fade-text.show {
-  opacity: 1;
-}
-
-/* ===== SIMPLE TEXT POP-UP (SCROLL) ===== */
-.fade-text {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-text.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* =========================
    MOBILE RESPONSIVE
@@ -358,11 +214,15 @@
 @media (max-width: 768px) {
 
   .brand-hero h1 {
-    font-size: 40px;
+    font-size: 42px;
   }
 
   .brand-hero h2 {
     font-size: 22px;
+  }
+
+  .brand-hero p {
+    font-size: 14px;
   }
 
   .nation-grid {
@@ -373,21 +233,7 @@
     font-size: 28px;
   }
 
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-  }
-
-@media (max-width: 768px) {
-  .brand-story .section-title {
-    font-size: 32px;
-  }
-
-  .brand-line {
-    font-size: 16px;
-  }
-
-  .brand-quote {
-    font-size: 20px;
+  .brand-cta p {
+    font-size: 14px;
   }
 }
