@@ -266,6 +266,33 @@
 
 
 /* =========================
+   PRODUCT CARD HOVER
+========================= */
+
+.nation-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.nation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   WHOLESALE BUTTON HOVER
+========================= */
+
+.brand-cta .btn-dark {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-cta .btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255,255,255,0.25);
+}
+
+
+/* =========================
    MOBILE RESPONSIVE
 ========================= */
 
