@@ -1,193 +1,283 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>FOGG Brand | Mufee International</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =========================
+   GLOBAL
+========================= */
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f7f6f4;
+  color: #111;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="brands.css">
-</head>
+/* =========================
+   BRAND HERO (HOME STYLE)
+========================= */
 
-<body>
+.brand-hero {
+  padding: 90px 20px 70px;
+  text-align: center;
+  background: #f7f6f4;
+}
 
-<!-- =========================
-     HEADER (SAME AS HOME)
-========================= -->
-<header class="header">
-  <div class="header-inner">
-    <div class="logo" >MUFEE INTERNATIONAL</div>
+.brand-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  margin-bottom: 8px;
+}
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="brands.html" class="active">Brands</a>
-      <a href="distribution.html">Distribution</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+.brand-hero h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
 
-    <a class="header-whatsapp-btn" href="https://wa.me/94XXXXXXXXX" target="_blank">
-      WhatsApp
-    </a>
-  </div>
-</header>
+.brand-hero p {
+  font-size: 15px;
+  color: #666;
+  max-width: 560px;
+  margin: 0 auto;
+}
 
-<!-- =========================
-     BRAND HERO
-========================= -->
-<section class="brand-hero">
-  <div class="brand-hero-overlay"></div>
+/* =========================
+   SECTION TITLES
+========================= */
 
-  <div class="brand-hero-content">
-    <h1 class="fade-text">FOGG</h1>
-    <h2 class="fade-text">Powering Modern Fragrance Culture</h2>
-    <p class="fade-text">
-      A bold expression of confidence, crafted for long-lasting freshness
-      and trusted by millions across Sri Lanka.
-    </p>
-  </div>
-</section>
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 14px;
+}
 
-<!-- =========================
-     PRODUCT COLLECTION
-========================= -->
-<section class="brands-products">
+.brand-line {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
 
-  <h2 class="section-title fade-text">FOGG Product Collection</h2>
+/* =========================
+   PRODUCT COLLECTION
+========================= */
 
-  <p class="brand-line fade-text">
-    FOGG is more than a fragrance — it is a statement of confidence,
-    crafted for those who lead, not follow.
-  </p>
+.brands-products {
+  padding: 80px 20px;
+  background: #fff;
+}
 
-  <div class="nation-grid">
+.nation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    <!-- 12 PRODUCTS -->
-    <div class="nation-card"><img src="images/fogg1.png"><h4>FOGG Black</h4><p>Everyday confidence with lasting freshness.</p></div>
-    <div class="nation-card"><img src="images/fogg2.png"><h4>FOGG Royal</h4><p>A bold signature scent.</p></div>
-    <div class="nation-card"><img src="images/fogg3.png"><h4>FOGG Master</h4><p>Refined fragrance with impact.</p></div>
-    <div class="nation-card"><img src="images/fogg4.png"><h4>FOGG Scent</h4><p>Powerful and distinctive aroma.</p></div>
-    <div class="nation-card"><img src="images/fogg5.png"><h4>FOGG Ace</h4><p>Dynamic and energetic freshness.</p></div>
-    <div class="nation-card"><img src="images/fogg6.png"><h4>FOGG Marco</h4><p>Confidence-driven performance.</p></div>
-    <div class="nation-card"><img src="images/fogg7.png"><h4>FOGG Impressio</h4><p>Luxury finish with depth.</p></div>
-    <div class="nation-card"><img src="images/fogg8.png"><h4>FOGG Extremo</h4><p>Bold intensity that lasts.</p></div>
-    <div class="nation-card"><img src="images/fogg9.png"><h4>FOGG Absolute</h4><p>Premium aroma experience.</p></div>
-    <div class="nation-card"><img src="images/fogg10.png"><h4>FOGG Dynamic</h4><p>Fresh scent for active lives.</p></div>
-    <div class="nation-card"><img src="images/fogg11.png"><h4>FOGG Oriental</h4><p>Rich oriental notes.</p></div>
-    <div class="nation-card"><img src="images/fogg12.png"><h4>FOGG Elite</h4><p>Exclusive premium presence.</p></div>
+.nation-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  </div>
-</section>
+.nation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
 
-<!-- =========================
-     BRAND STORY
-========================= -->
-<section class="brand-story">
+.nation-card img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-  <div class="brand-story-inner">
-    <h2 class="section-title fade-text">The Essence of FOGG</h2>
+.nation-card h4 {
+  margin-top: 14px;
+  font-size: 18px;
+}
 
-    <p class="fade-text">
-      FOGG is built on confidence, performance, and identity.
-      Each fragrance is designed to make a lasting impression,
-      combining modern style with powerful longevity.
-    </p>
+.nation-card p {
+  font-size: 14px;
+  color: #555;
+}
 
-    <p class="fade-text">
-      Distributed exclusively by <strong>Mufee International (Pvt) Ltd</strong>,
-      FOGG continues to strengthen its presence across Sri Lanka
-      through trusted retail, wholesale, and pharmacy networks.
-    </p>
+/* =========================
+   BRAND STORY / PHILOSOPHY
+========================= */
 
-    <blockquote class="fade-text">
-      “FOGG doesn’t fade — it defines.”
-    </blockquote>
-  </div>
+.brand-story {
+  padding: 90px 20px;
+  background: #f7f6f4;
+  text-align: center;
+}
 
-</section>
+.brand-story-inner {
+  max-width: 700px;
+  margin: auto;
+}
 
-<!-- =========================
-     MARKET PRESENCE
-========================= -->
-<section class="brand-presence">
+.brand-story p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 16px;
+}
 
-  <h2 class="section-title fade-text">Market Presence</h2>
+.brand-story blockquote {
+  margin-top: 26px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #000;
+}
 
-  <div class="brand-presence-grid">
-    <div>
-      <h4>Retail Stores</h4>
-      <p>High-demand fragrance brand across leading retailers.</p>
-    </div>
-    <div>
-      <h4>Supermarkets</h4>
-      <p>Strong shelf visibility in major supermarket chains.</p>
-    </div>
-    <div>
-      <h4>Pharmacies</h4>
-      <p>Trusted quality meeting strict retail standards.</p>
-    </div>
-  </div>
+/* =========================
+   WHOLESALE CTA (FIXED)
+========================= */
 
-</section>
+.brand-cta {
+  padding: 120px 20px 140px; /* FIXED spacing */
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
 
-<!-- =========================
-     WHOLESALE CTA
-========================= -->
-<section class="brand-cta">
-  <h3 class="fade-text">Partner With Us</h3>
-  <p class="fade-text">
-    Join our nationwide wholesale distribution network and
-    grow your business with one of Sri Lanka’s most trusted
-    fragrance brands.
-  </p>
-  <a href="contact.html" class="btn-dark">Contact Wholesale Team</a>
-</section>
+.brand-cta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
 
-<!-- =========================
-     FOOTER (SAME AS HOME)
-========================= -->
-<footer class="footer">
-  <div class="footer-inner">
+.brand-cta p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.7;
+}
 
-    <div class="footer-brand">
-      <h4>MUFEE INTERNATIONAL</h4>
-      <p>Powering Wholesale Distribution in Sri Lanka.</p>
-    </div>
+.brand-cta .btn-dark {
+  background: #fff;
+  color: #000;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
 
-    <div class="footer-links">
+.brand-cta .btn-dark:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(255,255,255,0.35);
+}
 
-      <div>
-        <strong>Quick Links</strong>
-        <a href="index.html">Home</a>
-        <a href="brands.html">Brands</a>
-        <a href="distribution.html">Distribution</a>
-        <a href="about.html">About</a>
-      </div>
+/* =========================
+   FOOTER (SAME AS HOME)
+========================= */
 
-      <div>
-        <strong>Useful Links</strong>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-      </div>
+.footer {
+  background: #f7f6f4;
+  padding: 60px 20px 0;
+}
 
-      <div>
-        <strong>Social</strong>
-        <a href="https://www.facebook.com/share/1DfWXcRC7j/" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/mr_mufee_22?igsh=MXNkcXF1NjU0bHc2" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/mufeezur-rahman-2537b2364" target="_blank">LinkedIn</a>
-      </div>
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
 
-    </div>
-  </div>
+.footer-brand {
+  max-width: 260px;
+}
 
-  <div class="footer-bottom">
-    © 2025 MUFEE INTERNATIONAL. All rights reserved.
-  </div>
-</footer>
+.footer-brand h4 {
+  margin-bottom: 6px;
+}
 
-</body>
-  </html>
+.footer-brand p {
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-links strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+/* =========================
+   TEXT FADE ANIMATION ONLY
+========================= */
+
+.fade-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .brand-hero h1 {
+    font-size: 34px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .nation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-cta h3 {
+    font-size: 28px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
