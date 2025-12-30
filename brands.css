@@ -115,3 +115,38 @@ body {
     font-size: 38px;
   }
 }
+
+/* =========================
+   PRODUCT SECTION SPACING FIX
+========================= */
+
+.brands-products {
+  padding-top: 100px;   /* pushes section down from hero */
+  padding-bottom: 80px;
+}
+
+/* Center the sentence properly */
+.brand-line {
+  max-width: 700px;
+  margin: 0 auto 50px;   /* center + space below */
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Give heading breathing space */
+.brands-products .section-title {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .brands-products {
+    padding-top: 70px;
+  }
+
+  .brand-line {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+}
