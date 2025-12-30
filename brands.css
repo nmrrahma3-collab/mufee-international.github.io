@@ -314,6 +314,26 @@
   animation: textFade 0.9s ease-out both;
 }
 
+/* =========================
+   SOFT ZOOM ANIMATION
+========================= */
+
+@keyframes softZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.brand-hero,
+.nation-card {
+  animation: softZoom 0.8s ease-out both;
+}
+
 
 /* =========================
    MOBILE RESPONSIVE
