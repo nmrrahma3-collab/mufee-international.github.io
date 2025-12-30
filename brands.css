@@ -234,6 +234,36 @@
   padding-top: 20px;
 }
 
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate main sections */
+.brand-hero,
+.brands-products,
+.brand-story,
+.brand-cta,
+.footer {
+  animation: fadeSlideUp 0.8s ease-out both;
+}
+
+/* Stagger effect (smooth like Apple) */
+.brands-products { animation-delay: 0.1s; }
+.brand-story { animation-delay: 0.2s; }
+.brand-cta { animation-delay: 0.3s; }
+.footer { animation-delay: 0.4s; }
+
 
 /* =========================
    MOBILE RESPONSIVE
