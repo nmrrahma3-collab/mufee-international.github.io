@@ -291,6 +291,29 @@
   box-shadow: 0 12px 28px rgba(255,255,255,0.25);
 }
 
+/* =========================
+   TEXT REVEAL ANIMATION
+========================= */
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title,
+.brand-story p,
+.brand-story blockquote,
+.brand-hero h1,
+.brand-hero p {
+  animation: textFade 0.9s ease-out both;
+}
+
 
 /* =========================
    MOBILE RESPONSIVE
