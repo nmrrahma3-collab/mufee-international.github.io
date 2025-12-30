@@ -13,3 +13,15 @@ function fadeInText() {
 
 window.addEventListener("scroll", fadeInText);
 fadeInText();
+
+const fadeTexts = document.querySelectorAll('.fade-text');
+
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+fadeTexts.forEach(text => fadeObserver.observe(text));
