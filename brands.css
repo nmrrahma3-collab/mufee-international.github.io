@@ -1,15 +1,19 @@
-/* BRAND HERO */
+/* SAFETY FIX */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* HERO */
 .brand-hero {
-  padding: 120px 20px;
+  padding: 140px 20px;
+  background: #f7f5f2;
   text-align: center;
-  background: linear-gradient(#ffffffee, #ffffffee),
-              url("images/brand-hero-bg.png") center/cover no-repeat;
 }
 
 .brand-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 56px;
-  letter-spacing: 4px;
+  font-size: 58px;
 }
 
 .brand-hero h2 {
@@ -18,16 +22,22 @@
 }
 
 .brand-hero p {
-  max-width: 620px;
+  max-width: 600px;
   margin: auto;
+  font-size: 15px;
   color: #555;
-  line-height: 1.7;
 }
 
 /* PRODUCTS */
 .brands-products {
   padding: 90px 20px;
-  background: #fff;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .nation-grid {
@@ -40,78 +50,60 @@
 
 .nation-card {
   background: #fff;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
   text-align: center;
-  transition: transform .4s ease, box-shadow .4s ease;
 }
 
-.nation-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.nation-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* BRAND STORY */
+/* STORY */
 .brand-story {
-  padding: 90px 20px;
+  padding: 100px 20px;
   background: #fafafa;
-}
-
-.brand-story-inner {
-  max-width: 900px;
-  margin: auto;
   text-align: center;
 }
 
 .brand-story blockquote {
   margin-top: 25px;
-  font-size: 22px;
   font-family: 'Playfair Display', serif;
+  font-size: 22px;
 }
 
-/* MARKET */
-.brand-trust {
+/* RETAIL */
+.retail-presence {
   padding: 90px 20px;
-  background: #f6f4f2;
 }
 
 /* CTA */
 .brand-cta {
-  padding: 110px 20px;
+  padding: 130px 20px 150px;
   background: #000;
   color: #fff;
   text-align: center;
 }
 
 .brand-cta .btn-dark {
+  margin-top: 30px;
   background: #fff;
   color: #000;
-  padding: 14px 30px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
-/* REVEAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all .8s ease;
-}
-
-.reveal.show {
+/* ANIMATION */
+.reveal.active {
   opacity: 1;
   transform: translateY(0);
+  transition: all .8s ease;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .nation-grid { grid-template-columns: 1fr; }
-  .brand-hero h1 { font-size: 42px; }
-}
+  .nation-grid {
+    grid-template-columns: 1fr;
+  }
+  .brand-hero h1 {
+    font-size: 42px;
+  }
+  }
