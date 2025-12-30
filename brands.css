@@ -4,16 +4,16 @@
 
 .brand-hero {
   background: linear-gradient(
-      rgba(255,255,255,0.92),
-      rgba(255,255,255,0.92)
+      rgba(255,255,255,0.95),
+      rgba(255,255,255,0.95)
     ),
     url("images/brand-hero-bg.png") center / cover no-repeat;
-  padding: 120px 20px 100px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .brand-hero-content {
-  max-width: 780px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -27,7 +27,7 @@
 .brand-hero h2 {
   font-family: 'Playfair Display', serif;
   font-size: 30px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .brand-hero p {
@@ -38,55 +38,73 @@
 
 
 /* =========================
-   PRODUCTS SECTION
+   SECTION TITLE
 ========================= */
-
-.brands-products {
-  padding: 90px 20px;
-  background: #fff;
-}
 
 .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 34px;
+  font-size: 36px;
   text-align: center;
-  margin-bottom: 18px;
-}
-
-.brand-line {
-  max-width: 720px;
-  margin: 0 auto 45px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #444;
+  margin-bottom: 20px;
 }
 
 
 /* =========================
-   PRODUCT GRID
+   SCROLL REVEAL (TEXT ONLY)
 ========================= */
+
+.fade-text {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   PRODUCT COLLECTION
+========================= */
+
+.brands-products {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.brand-line {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+}
 
 .nation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  gap: 28px;
   max-width: 1100px;
   margin: auto;
 }
 
+/* PRODUCT CARD */
 .nation-card {
-  background: #ffffff;
-  border-radius: 12px;
+  background: #fff;
+  border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
 }
 
+/* LIGHT HOVER GLOW */
 .nation-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
 .nation-card img {
@@ -95,7 +113,7 @@
 }
 
 .nation-card h4 {
-  margin-top: 15px;
+  margin-top: 16px;
   font-size: 18px;
 }
 
@@ -120,22 +138,18 @@
   text-align: center;
 }
 
-.brand-story .section-title {
+.brand-story .brand-lead {
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
   margin-bottom: 22px;
 }
 
-.brand-story .brand-lead {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 16px;
-  color: #222;
-}
-
 .brand-story p {
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.9;
   color: #444;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .brand-story blockquote {
@@ -143,16 +157,15 @@
   font-family: 'Playfair Display', serif;
   font-size: 22px;
   color: #000;
-  letter-spacing: 1px;
 }
 
 
 /* =========================
-   WHOLESALE CTA (FIXED)
+   WHOLESALE CTA
 ========================= */
 
 .brand-cta {
-  padding: 110px 20px 120px;
+  padding: 120px 20px;
   background: #000;
   color: #fff;
   text-align: center;
@@ -160,50 +173,26 @@
 
 .brand-cta h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  margin-bottom: 16px;
+  font-size: 36px;
+  margin-bottom: 18px;
 }
 
 .brand-cta p {
-  max-width: 620px;
-  margin: 0 auto 34px;
-  font-size: 15px;
-  line-height: 1.8;
+  max-width: 650px;
+  margin: auto;
+  font-size: 16px;
   color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 35px;
 }
 
-/* BUTTON FIX — NO OVERLAP */
 .brand-cta .btn-dark {
-  display: inline-block;
   background: #fff;
   color: #000;
   padding: 14px 32px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  margin-top: 10px;
-}
-
-
-/* =========================
-   SIMPLE FADE TEXT ANIMATION
-========================= */
-
-.fade-text {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.9s ease forwards;
-}
-
-.fade-text:nth-child(1) { animation-delay: 0.1s; }
-.fade-text:nth-child(2) { animation-delay: 0.25s; }
-.fade-text:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 
@@ -221,8 +210,8 @@
     font-size: 22px;
   }
 
-  .brand-hero p {
-    font-size: 14px;
+  .section-title {
+    font-size: 30px;
   }
 
   .nation-grid {
@@ -232,8 +221,4 @@
   .brand-cta h3 {
     font-size: 28px;
   }
-
-  .brand-cta p {
-    font-size: 14px;
-  }
-}
+   }
