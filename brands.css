@@ -1,49 +1,58 @@
-/* ===== BRAND HERO ===== */
-.brand-hero {
-  background: #f6f4f2;
-  padding: 120px 20px;
-}
+/* =========================
+   BRAND HERO
+========================= */
 
-.brand-hero-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
+.brand-hero {
+  background: linear-gradient(
+      rgba(255,255,255,0.92),
+      rgba(255,255,255,0.92)
+    ),
+    url("images/brand-hero-bg.png") center / cover no-repeat;
+  padding: 110px 20px;
+  text-align: center;
 }
 
 .brand-hero-content {
-  text-align: center;
+  max-width: 800px;
+  margin: auto;
 }
 
 .brand-hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 }
 
 .brand-hero h2 {
-  font-size: 28px;
-  margin: 12px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 14px 0;
 }
 
 .brand-hero p {
+  font-size: 16px;
   color: #555;
   line-height: 1.7;
 }
 
-/* ===== PRODUCTS ===== */
+
+/* =========================
+   PRODUCT COLLECTION
+========================= */
+
 .brand-products {
   padding: 90px 20px;
+  background: #fff;
 }
 
 .section-title {
   font-family: 'Playfair Display', serif;
-  text-align: center;
   font-size: 34px;
+  text-align: center;
   margin-bottom: 40px;
 }
 
+/* GRID – SAME AS OUR BRANDS */
 .nation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -52,18 +61,44 @@
   margin: auto;
 }
 
+/* CARD – SAME SIZE + ANIMATION */
 .nation-card {
-  background: #fff;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* ===== STORY ===== */
+.nation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.nation-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.nation-card h4 {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.nation-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* ===============================
+   BRAND STORY
+=============================== */
+
 .brand-story {
-  background: #fafafa;
   padding: 90px 20px;
+  background: #fafafa;
 }
 
 .brand-story-inner {
@@ -72,41 +107,104 @@
   text-align: center;
 }
 
-.brand-lead {
+.brand-story .brand-lead {
   font-size: 18px;
-  margin-bottom: 20px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 18px;
 }
 
-/* ===== TRUST ===== */
+.brand-story p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.brand-story blockquote {
+  margin-top: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   RETAIL PRESENCE
+========================= */
+
 .brand-trust {
   padding: 90px 20px;
   background: #f6f4f2;
 }
 
-/* ===== CTA ===== */
+.brand-trust .nation-card {
+  padding: 26px;
+}
+
+.brand-trust h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   WHOLESALE CTA
+========================= */
+
 .brand-cta {
+  padding: 100px 20px;
   background: #000;
   color: #fff;
-  padding: 100px 20px;
   text-align: center;
+}
+
+.brand-cta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.brand-cta p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 30px;
 }
 
 .brand-cta .btn-dark {
   background: #fff;
   color: #000;
-  padding: 12px 26px;
-  text-decoration: none;
+  padding: 12px 28px;
   border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* ===== MOBILE ===== */
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
-  .brand-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
+
+  .brand-hero h1 {
+    font-size: 42px;
+  }
+
+  .brand-hero h2 {
+    font-size: 22px;
   }
 
   .nation-grid {
     grid-template-columns: 1fr;
+  }
+
+  .brand-cta h3 {
+    font-size: 28px;
   }
 }
