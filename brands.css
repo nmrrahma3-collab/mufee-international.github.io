@@ -1,45 +1,41 @@
-/* ================= BRAND HERO (BANNER) ================= */
-.brand-hero {
-  margin-top: 90px;
-  padding: 50px 20px;
-  background: #f7f5f2;
-  text-align: center;
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8f6f3;
 }
 
-.brand-hero-content {
-  max-width: 900px;
-  margin: auto;
+/* HERO BANNER */
+.brand-hero {
+  padding: 70px 20px;
+  text-align: center;
+  background: #f8f6f3;
 }
 
 .brand-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  letter-spacing: 2px;
-}
-
-.brand-hero h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin: 8px 0;
+  font-size: 48px;
 }
 
 .brand-hero p {
-  font-size: 15px;
   color: #555;
+  margin-top: 8px;
 }
 
-/* ================= PRODUCTS ================= */
+/* PRODUCTS */
 .brands-products {
   padding: 80px 20px;
-  background: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 15px;
 }
 
 .brand-line {
-  max-width: 700px;
+  max-width: 650px;
   margin: 0 auto 40px;
-  font-size: 16px;
-  text-align: center;
-  color: #444;
+  color: #555;
 }
 
 .nation-grid {
@@ -52,84 +48,70 @@
 
 .nation-card {
   background: #fff;
+  padding: 22px;
   border-radius: 12px;
-  padding: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.nation-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
-}
-
-.nation-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.nation-card h4 {
-  margin-top: 15px;
-}
-
-.nation-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* ================= STORY ================= */
+/* STORY */
 .brand-story {
   padding: 80px 20px;
-  background: #fafafa;
-}
-
-.brand-story-inner {
-  max-width: 800px;
-  margin: auto;
   text-align: center;
 }
 
-.brand-lead {
-  font-size: 18px;
-  margin-bottom: 14px;
+.brand-story p {
+  max-width: 650px;
+  margin: 10px auto;
+  color: #444;
 }
 
-.brand-story blockquote {
-  margin-top: 25px;
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-}
-
-/* ================= CTA ================= */
+/* WHOLESALE */
 .brand-cta {
-  padding: 90px 20px;
+  padding: 100px 20px;
+  text-align: center;
   background: #000;
   color: #fff;
-  text-align: center;
 }
 
 .brand-cta p {
   max-width: 600px;
-  margin: 0 auto 30px;
+  margin: 15px auto 30px;
 }
 
-.brand-cta .btn-dark {
+.btn-dark {
   background: #fff;
   color: #000;
-  padding: 12px 28px;
-  border-radius: 6px;
+  padding: 14px 32px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
 }
 
-/* ================= MOBILE ================= */
+/* TEXT ANIMATION */
+.fade-text {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .nation-grid {
     grid-template-columns: 1fr;
   }
 
   .brand-hero h1 {
-    font-size: 32px;
+    font-size: 38px;
   }
 }
