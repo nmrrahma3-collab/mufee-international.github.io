@@ -345,8 +345,8 @@ body {
 .nation-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 28px 22px;          /* ⬅ more space */
-  box-shadow: 0 14px 34px rgba(0,0,0,0.1);
+  padding: 26px 20px;          /* ⬅ more space */
+  box-shadow: 0 14px 32px rgba(0,0,0,0.1);
   text-align: center;
 
   height: auto !important;
@@ -356,7 +356,7 @@ body {
 /* FULL BOTTLE IMAGE */
 .nation-card img {
   width: 100%;
-  max-height: 340px;           /* ⬅ BIGGER IMAGE AREA */
+  max-height: 320px;           /* ⬅ BIGGER IMAGE AREA */
   height: auto;
   object-fit: contain;         /* ⬅ show full bottle */
   margin-bottom: 16px;
