@@ -380,3 +380,19 @@ body {
     height: 200px;
   }
 }
+
+/* =============================
+   PRODUCT IMAGE FINAL SIZE FIX
+============================= */
+
+.nation-card {
+  padding: 26px 22px;
+}
+
+/* Make image BIGGER inside card */
+.nation-card img {
+  width: 100%;
+  height: 380px;          /* ⬅ FORCE BIG IMAGE AREA */
+  object-fit: contain;    /* ⬅ show full bottle */
+  margin-bottom: 14px;
+}
