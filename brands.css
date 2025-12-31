@@ -336,3 +336,28 @@ body {
   }
 
   }
+
+
+/* =============================
+   PRODUCT IMAGE SIZE FIX
+============================= */
+
+.nation-card img {
+  width: 100%;
+  height: 220px;              /* ⬅ increase image box height */
+  object-fit: contain;        /* ⬅ show full bottle */
+  border-radius: 12px;
+  padding: 10px;              /* space around bottle */
+  background: #f6f4f2;        /* same marble/overlay tone */
+}
+
+/* Slightly bigger cards */
+.nation-card {
+  padding: 18px;
+}
+
+@media (max-width: 768px) {
+  .nation-card img {
+    height: 200px;
+  }
+}
