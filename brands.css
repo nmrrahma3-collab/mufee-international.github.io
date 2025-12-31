@@ -222,12 +222,10 @@ body {
    WHOLESALE CTA FIX
 ========================= */
 
-.brand-cta h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+.brand-cta {
+  background: #000;
   color: #fff;
+  padding: 90px 20px;
 }
 
 /* =========================
