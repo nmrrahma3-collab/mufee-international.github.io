@@ -219,6 +219,18 @@ body {
 }
 
 /* =========================
+   WHOLESALE CTA FIX
+========================= */
+
+.brand-cta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* =========================
    FOOTER
 ========================= */
 .footer {
