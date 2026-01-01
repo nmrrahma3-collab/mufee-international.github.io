@@ -467,3 +467,56 @@ body {
     max-height: 88%;
   }
 }
+
+
+/* =============================
+   FINAL IMAGE + CARD FIX
+============================= */
+
+.nation-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE CONTAINER */
+.product-img-box {
+  width: 100%;
+  height: 300px;            /* DESKTOP FIXED HEIGHT */
+  background: #f3f3f3;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+/* IMAGE */
+.product-img-box img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =============================
+   MOBILE FIX (IMPORTANT)
+============================= */
+@media (max-width: 768px) {
+
+  .product-img-box {
+    height: 260px;          /* MOBILE SAME HEIGHT */
+    border-radius: 20px;
+  }
+
+  .product-img-box img {
+    max-width: 82%;
+    max-height: 82%;
+  }
+}
