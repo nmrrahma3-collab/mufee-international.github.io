@@ -424,3 +424,12 @@ body {
   text-align: center;
   min-height: 120px; /* prevents page jump */
 }
+
+#typing-heading {
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  letter-spacing: 1px;
+  color: #111;
+  min-height: 44px;
+}
