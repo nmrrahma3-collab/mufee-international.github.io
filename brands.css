@@ -144,3 +144,46 @@ body {
     height: 260px;
   }
 }
+
+/* =============================
+   PRODUCT IMAGE – APPLE STYLE (FINAL)
+============================= */
+
+.product-img-box {
+  width: 100%;
+  padding: 24px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE BEHAVIOR */
+.product-img-box img {
+  width: 100%;
+  max-width: 260px;     /* controls WIDTH */
+  height: auto;         /* 🔥 KEY FIX */
+  display: block;
+  border-radius: 16px;
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .product-img-box img {
+    max-width: 280px;
+  }
+}
+
+/* MOBILE – THIS FIXES YOUR ISSUE */
+@media (max-width: 768px) {
+
+  .product-img-box {
+    padding: 32px 20px;
+  }
+
+  .product-img-box img {
+    max-width: 320px;   /* 🔥 MAKES IT WIDE */
+    width: 100%;
+    height: auto;
+  }
+}
