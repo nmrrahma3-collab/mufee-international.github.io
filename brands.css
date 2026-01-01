@@ -187,3 +187,25 @@ body {
     height: auto;
   }
 }
+
+/* =========================
+   MOBILE PRODUCT CARD FIX
+========================= */
+@media (max-width: 768px) {
+
+  .nation-card {
+    padding: 22px 18px;
+    min-height: 420px;   /* ⬅ card height increased */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nation-card img {
+    width: 100%;
+    height: 260px;       /* ⬅ image height fixed for phone */
+    object-fit: contain; /* ⬅ FULL bottle visible */
+    margin-bottom: 14px;
+  }
+
+}
