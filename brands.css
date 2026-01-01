@@ -347,3 +347,33 @@ body {
     height: 300px;        /* ⬅ small increase for phone */
   }
 }
+
+/* =============================
+   MOBILE IMAGE CARD FIX (FINAL)
+============================= */
+@media (max-width: 768px) {
+
+  .nation-card {
+    padding: 18px 16px;
+  }
+
+  /* Image container fixed */
+  .product-img-box {
+    width: 100%;
+    height: 260px;              /* ✅ fixed height for phone */
+    border-radius: 16px;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+
+  /* Image always fits inside */
+  .product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;        /* ✅ full bottle always visible */
+  }
+}
