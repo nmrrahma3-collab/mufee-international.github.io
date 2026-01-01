@@ -413,3 +413,14 @@ body {
   color: #fff;
   cursor: pointer;
      }
+/* Typing animation text style */
+#typing-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  min-height: 120px; /* prevents page jump */
+}
