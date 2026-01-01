@@ -427,3 +427,43 @@ body {
     line-height: 1.5;
   }
 }
+
+
+/* =============================
+   PRODUCT IMAGE BOX – FINAL FIX
+============================= */
+
+.product-img-box {
+  width: 100%;
+  height: 320px;                 /* DESKTOP HEIGHT */
+  background: #f3f3f3;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.product-img-box img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =============================
+   MOBILE PERFECT FIX
+============================= */
+@media (max-width: 768px) {
+
+  .product-img-box {
+    height: 260px;              /* SAME HEIGHT FOR ALL MOBILE CARDS */
+    border-radius: 18px;
+  }
+
+  .product-img-box img {
+    max-width: 88%;
+    max-height: 88%;
+  }
+}
