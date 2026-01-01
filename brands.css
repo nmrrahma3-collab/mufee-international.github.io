@@ -368,3 +368,48 @@ body {
     font-size: 15px;
   }
    }
+/* ===============================
+   FADE-UP SHOW STATE
+=============================== */
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   IMAGE MODAL POPUP
+=============================== */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.image-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  background: #fff;
+  padding: 20px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+     }
