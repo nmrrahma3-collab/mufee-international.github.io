@@ -348,3 +348,56 @@ body {
   transform: translateY(-2px);
   background: #f1f1f1;
 }
+
+/* =============================
+   PRODUCT CARD FINAL FIX
+============================= */
+
+.nation-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+}
+
+/* IMAGE WRAPPER FIX */
+.nation-card img {
+  width: 100%;
+  height: 320px;          /* SAME HEIGHT FOR ALL */
+  object-fit: contain;   /* SHOW FULL BOTTLE */
+  display: block;
+  margin: 0 auto 16px;
+}
+
+/* TITLE */
+.nation-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* DESCRIPTION */
+.nation-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* GRID HEIGHT CONSISTENCY */
+.nation-grid {
+  align-items: stretch;
+}
+
+/* MOBILE ADJUSTMENT */
+@media (max-width: 768px) {
+  .nation-card img {
+    height: 240px;
+  }
+}
