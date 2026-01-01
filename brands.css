@@ -482,3 +482,27 @@ body {
     transform: translateY(0);
   }
 }
+
+/* =========================
+   BRAND STORY – LUXURY FONT
+========================= */
+
+/* Story section font */
+.brand-story {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Story heading stays premium */
+.brand-story .section-title {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Typing lines text */
+#typing-lines p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.9;
+  letter-spacing: 0.4px;
+  color: #333;
+  text-align: center;
+}
