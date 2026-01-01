@@ -14,7 +14,7 @@ body {
 }
 
 /* =========================
-   HEADER (SAME AS HOME)
+   HEADER
 ========================= */
 .header {
   background: #f9f8f6;
@@ -46,7 +46,7 @@ body {
   color: #333;
   text-decoration: none;
   border-radius: 999px;
-  transition: 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .nav a:hover {
@@ -58,7 +58,7 @@ body {
   color: #fff;
 }
 
-/* WhatsApp */
+/* WhatsApp Button */
 .header-whatsapp-btn {
   display: flex;
   align-items: center;
@@ -70,12 +70,12 @@ body {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header-whatsapp-btn:hover {
-  transform: translateY(-2px);
   background: #1ebe5d;
+  transform: translateY(-2px);
 }
 
 /* =========================
@@ -97,12 +97,12 @@ body {
 
 .hero-left img,
 .hero-right img {
-  width: 300px;
+  width: 280px;
 }
 
 .hero-center {
-  max-width: 520px;
   text-align: center;
+  max-width: 520px;
 }
 
 .hero-center h1 {
@@ -128,14 +128,15 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 34px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 /* =========================
    PRODUCTS SECTION
 ========================= */
 .brands-products {
-  padding: 110px 20px 80px;
+  padding-top: 110px;
+  padding-bottom: 80px;
 }
 
 .brand-line {
@@ -151,7 +152,7 @@ body {
 .nation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 28px;
   max-width: 1150px;
   margin: auto;
   align-items: stretch;
@@ -166,9 +167,12 @@ body {
   padding: 22px;
   box-shadow: 0 14px 32px rgba(0,0,0,0.1);
   text-align: center;
+
   display: flex;
   flex-direction: column;
-  transition: 0.35s ease;
+  height: 100%;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .nation-card:hover {
@@ -176,24 +180,29 @@ body {
   box-shadow: 0 22px 45px rgba(0,0,0,0.18);
 }
 
-/* IMAGE BOX (IMPORTANT FIX) */
+/* IMAGE BOX (KEY FIX) */
 .product-img-box {
   width: 100%;
-  height: 360px;              /* BIG IMAGE AREA */
+  height: 360px;              /* DESKTOP HEIGHT */
   border-radius: 18px;
-  background: #f3f1ef;
+  overflow: hidden;
+  background: #f3f3f3;
+
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
-  overflow: hidden;
 }
 
-/* IMAGE */
 .product-img-box img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* FULL BOTTLE */
+  transition: transform 0.4s ease;
+}
+
+.nation-card:hover img {
+  transform: scale(1.05);
 }
 
 /* TEXT */
@@ -206,6 +215,7 @@ body {
 .nation-card p {
   font-size: 14px;
   color: #555;
+  line-height: 1.5;
 }
 
 /* =========================
@@ -261,15 +271,16 @@ body {
   color: #000;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .brand-cta a:hover {
   transform: translateY(-2px);
+  background: #f1f1f1;
 }
 
 /* =========================
-   FOOTER (SAME AS HOME)
+   FOOTER
 ========================= */
 .footer {
   background: #f9f8f6;
@@ -313,7 +324,7 @@ body {
 ========================= */
 .fade-up {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(30px);
   animation: fadeUp 0.9s ease forwards;
 }
 
@@ -325,12 +336,13 @@ body {
 }
 
 /* =========================
-   MOBILE FIX (VERY IMPORTANT)
+   MOBILE FIX (IMPORTANT)
 ========================= */
 @media (max-width: 768px) {
 
   .hero-content {
     flex-direction: column;
+    gap: 25px;
   }
 
   .hero-left,
@@ -346,7 +358,13 @@ body {
     grid-template-columns: 1fr;
   }
 
+  /* PHONE IMAGE FIX */
   .product-img-box {
-    height: 280px;     /* PHONE IMAGE FIX */
+    height: 300px;     /* 🔥 BIGGER PHONE IMAGE */
+  }
+
+  .brand-line {
+    padding: 0 16px;
+    font-size: 15px;
   }
    }
