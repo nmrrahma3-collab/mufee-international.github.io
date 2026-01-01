@@ -1,158 +1,52 @@
-/* =========================
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f6f4f2;
-  color: #222;
-}
-
-/* =========================
-   HEADER
-========================= */
-.header {
-  background: #f9f8f6;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 18px 0;
-  position: relative;
-  z-index: 10;
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  letter-spacing: 2px;
-  margin-right: 24px; /* space after MUFEE INTERNATIONAL */
-}
-
-/* NAV */
-.nav a {
-  padding: 8px 16px;
-  margin: 0 6px;
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-  border-radius: 999px;
-  transition: all 0.25s ease;
-}
-
-.nav a:hover {
-  background: rgba(0,0,0,0.06);
-}
-
-.nav a.active {
-  background: #000;
-  color: #fff;
-}
-
-/* =========================
-   SECTION TITLE
-========================= */
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-/* =========================
-   BRANDS PRODUCTS
-========================= */
+/* ================= PRODUCT GRID ================= */
 .brands-products {
-  padding: 120px 0 80px;
+  padding: 120px 20px 80px;
 }
 
 .brand-line {
+  text-align: center;
   max-width: 720px;
   margin: 0 auto 60px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.8;
   color: #555;
+  line-height: 1.8;
 }
 
-/* =========================
-   GRID
-========================= */
 .nation-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
   max-width: 1150px;
   margin: auto;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
 }
 
-/* =========================
-   PRODUCT CARD
-========================= */
+/* ================= CARD ================= */
 .nation-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 24px 20px;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 26px;
+  padding: 22px;
   text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
-.nation-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 22px 45px rgba(0,0,0,0.18);
-}
-
-/* =========================
-   IMAGE BOARD (FIXED)
-========================= */
+/* IMAGE BOARD */
 .product-img-box {
-  width: 100%;
-  height: 320px;
-  border-radius: 16px;
-  background: #f2f2f2;
+  height: 300px;
+  background: #f3f3f3;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   margin-bottom: 16px;
 }
 
-/* IMAGE */
 .product-img-box img {
-  width: 100%;
-  height: 100%;
+  max-height: 90%;
+  max-width: 90%;
   object-fit: contain;
-  border-radius: 14px;
-
-  transition: transform 0.45s ease;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.15));
 }
 
-/* HOVER ZOOM */
-.nation-card:hover .product-img-box img {
-  transform: scale(1.08);
-}
-
-/* =========================
-   TEXT
-========================= */
+/* TEXT */
 .nation-card h4 {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
@@ -162,361 +56,101 @@ body {
 .nation-card p {
   font-size: 14px;
   color: #555;
-  line-height: 1.5;
 }
 
-/* =========================
-   BRAND STORY
-========================= */
-.brand-story {
-  padding: 90px 20px;
-  text-align: center;
+/* ================= MOBILE ================= */
+@media (max-width:768px) {
+  .nation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-img-box {
+    height: 360px; /* 🔥 FIXED MOBILE */
+  }
 }
 
-.brand-story p {
-  max-width: 900px;
-  margin: auto;
-  font-size: 16px;
-  line-height: 1.9;
-  color: #444;
-}
-
-.brand-story blockquote {
-  margin-top: 30px;
-  font-size: 20px;
-  font-style: italic;
-}
-
-/* =========================
-   WHOLESALE CTA (FIXED)
-========================= */
+/* ================= CTA ================= */
 .brand-cta {
-  width: 100%;
   background: #000;
   color: #fff;
-  padding: 90px 20px;
   text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 90px 20px;
 }
 
 .brand-cta h3 {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .brand-cta p {
-  max-width: 560px;
-  margin: 0 auto 26px;
-  font-size: 16px;
+  max-width: 520px;
+  margin: auto;
   line-height: 1.7;
-  color: #eee;
 }
 
 .brand-cta a {
   display: inline-block;
+  margin-top: 24px;
   padding: 14px 36px;
-  border-radius: 30px;
   background: #fff;
   color: #000;
+  border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
-.brand-cta a:hover {
-  transform: translateY(-2px);
-  background: #f1f1f1;
+/* ================= MODAL ================= */
+.product-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
 }
 
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  background: #f9f8f6;
-  padding: 50px 20px 20px;
+.product-modal.active {
+  display: block;
 }
 
-.footer-inner {
-  max-width: 1200px;
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 30px;
+  padding: 26px;
+  max-width: 420px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-}
-
-.footer-links a {
-  display: block;
-  font-size: 13px;
-  color: #555;
-  margin-top: 6px;
-  text-decoration: none;
-}
-
-.footer-bottom {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   text-align: center;
-  font-size: 12px;
-  color: #777;
-  margin-top: 30px;
 }
 
-/* =========================
-   MOBILE FIX
-========================= */
-@media (max-width: 768px) {
-
-  .nation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .brands-products {
-    padding-top: 80px;
-  }
-
-  .product-img-box {
-    height: 240px;
-  }
-
-  .brand-cta h3 {
-    font-size: 26px;
-  }
-
-  .brand-cta p {
-    font-size: 15px;
-  }
-   }
-/* =============================
-   PRODUCT IMAGE BOARD – FINAL FIX
-============================= */
-
-.product-img-box {
-  width: 100%;
-  height: 360px;              /* 🔥 IMAGE BOARD SIZE */
-  background: #f3f3f3;        /* light clean background */
-  border-radius: 16px;        /* ✅ CURVED IMAGE BORDER */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin-bottom: 18px;
-}
-
-.product-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;        /* show FULL bottle */
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .product-img-box {
-    height: 280px;            /* perfect phone size */
-  }
-}
-
-.product-img-box {
-  width: 100%;
-  height: 400px;          /* ⬅ increased slightly (from 360) */
+.modal-img-box {
+  height: 300px;
   background: #f3f3f3;
-  border-radius: 18px;    /* a bit smoother curve */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin-bottom: 18px;
-}
-
-.product-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .product-img-box {
-    height: 300px;        /* ⬅ small increase for phone */
-  }
-}
-
-/* =============================
-   MOBILE IMAGE CARD FIX (FINAL)
-============================= */
-@media (max-width: 768px) {
-
-  .nation-card {
-    padding: 18px 16px;
-  }
-
-  /* Image container fixed */
-  .product-img-box {
-    width: 100%;
-    height: 260px;              /* ✅ fixed height for phone */
-    border-radius: 16px;
-    background: #f3f3f3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-bottom: 14px;
-  }
-
-  /* Image always fits inside */
-  .product-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;        /* ✅ full bottle always visible */
-  }
-}
-
-/* =============================
-   FINAL MOBILE CARD + IMAGE FIX
-============================= */
-@media (max-width: 768px) {
-
-  .nation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* CARD HEIGHT FIX */
-  .nation-card {
-    padding: 22px 18px;
-    min-height: 460px;     /* 🔥 BIG CARD */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  /* IMAGE BOARD */
-  .product-img-box {
-    width: 100%;
-    height: 300px;         /* 🔥 FIXED IMAGE AREA */
-    background: #f3f3f3;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-    padding: 12px;
-  }
-
-  /* IMAGE ITSELF */
-  .product-img-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  /* TEXT */
-  .nation-card h4 {
-    font-size: 17px;
-    margin-bottom: 6px;
-  }
-
-  .nation-card p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-}
-
-
-/* =============================
-   PRODUCT IMAGE BOX – FINAL FIX
-============================= */
-
-.product-img-box {
-  width: 100%;
-  height: 320px;                 /* DESKTOP HEIGHT */
-  background: #f3f3f3;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-  overflow: hidden;
-}
-
-.product-img-box img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  display: block;
-}
-
-/* =============================
-   MOBILE PERFECT FIX
-============================= */
-@media (max-width: 768px) {
-
-  .product-img-box {
-    height: 260px;              /* SAME HEIGHT FOR ALL MOBILE CARDS */
-    border-radius: 18px;
-  }
-
-  .product-img-box img {
-    max-width: 88%;
-    max-height: 88%;
-  }
-}
-
-
-/* =============================
-   FINAL IMAGE + CARD FIX
-============================= */
-
-.nation-card {
-  background: #ffffff;
   border-radius: 22px;
-  padding: 22px 18px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-}
-
-/* IMAGE CONTAINER */
-.product-img-box {
-  width: 100%;
-  height: 300px;            /* DESKTOP FIXED HEIGHT */
-  background: #f3f3f3;
-  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-/* IMAGE */
-.product-img-box img {
-  max-width: 85%;
+.modal-img-box img {
   max-height: 85%;
+  max-width: 85%;
   object-fit: contain;
-  display: block;
 }
 
-/* =============================
-   MOBILE FIX (IMPORTANT)
-============================= */
-@media (max-width: 768px) {
-
-  .product-img-box {
-    height: 260px;          /* MOBILE SAME HEIGHT */
-    border-radius: 20px;
-  }
-
-  .product-img-box img {
-    max-width: 82%;
-    max-height: 82%;
-  }
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
 }
