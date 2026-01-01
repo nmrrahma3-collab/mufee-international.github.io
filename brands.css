@@ -26,6 +26,21 @@ body {
   color: #555;
 }
 
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 📱 MOBILE IMAGE WIDTH FIX */
+@media (max-width: 768px) {
+  .product-img-box img {
+    width: 100%;
+    max-width: 100%;
+    transform: scale(1.08);   /* ⬅ makes bottle visually wider */
+  }
+}
+
 /* GRID */
 .nation-grid {
   display: grid;
