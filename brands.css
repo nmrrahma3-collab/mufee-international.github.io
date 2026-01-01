@@ -401,3 +401,59 @@ body {
     height: 240px;
   }
 }
+
+
+/* =============================
+   PRODUCT CARD – FINAL STABLE FIX
+============================= */
+
+.nation-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* IMAGE – DESKTOP */
+.nation-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 14px;
+}
+
+/* TEXT */
+.nation-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.nation-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* =============================
+   MOBILE FIX (IMPORTANT)
+============================= */
+@media (max-width: 768px) {
+
+  .nation-card {
+    padding: 18px 16px;
+  }
+
+  .nation-card img {
+    height: 220px;      /* 🔥 FIXED FOR PHONE */
+    margin-bottom: 12px;
+  }
+}
+
+
