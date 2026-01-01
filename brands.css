@@ -36,6 +36,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 22px;
   letter-spacing: 2px;
+  margin-right: 24px; /* space after MUFEE INTERNATIONAL */
 }
 
 /* NAV */
@@ -58,70 +59,6 @@ body {
   color: #fff;
 }
 
-/* WhatsApp Button */
-.header-whatsapp-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.header-whatsapp-btn:hover {
-  background: #1ebe5d;
-  transform: translateY(-2px);
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
-  background-size: cover;
-  background-position: center;
-  padding: 80px 0;
-}
-
-.hero-content {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero-left img,
-.hero-right img {
-  width: 300px;
-}
-
-.hero-center {
-  text-align: center;
-  max-width: 520px;
-}
-
-.hero-center h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-}
-
-.hero-center h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  margin: 10px 0;
-}
-
-.hero-center p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
 /* =========================
    SECTION TITLE
 ========================= */
@@ -136,8 +73,7 @@ body {
    BRANDS PRODUCTS
 ========================= */
 .brands-products {
-  padding-top: 120px;
-  padding-bottom: 80px;
+  padding: 120px 0 80px;
 }
 
 .brand-line {
@@ -149,24 +85,32 @@ body {
   color: #555;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 .nation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   max-width: 1150px;
   margin: auto;
+  align-items: stretch;
 }
 
 /* =========================
-   PRODUCT CARD (FINAL)
+   PRODUCT CARD
 ========================= */
 .nation-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 20px;
-  padding: 28px 22px;
+  padding: 24px 20px;
   box-shadow: 0 14px 32px rgba(0,0,0,0.1);
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -175,15 +119,40 @@ body {
   box-shadow: 0 22px 45px rgba(0,0,0,0.18);
 }
 
-/* FULL BOTTLE IMAGE */
-.nation-card img {
+/* =========================
+   IMAGE BOARD (FIXED)
+========================= */
+.product-img-box {
   width: 100%;
-  height: 380px;              /* ✅ BIG IMAGE */
-  object-fit: contain;        /* ✅ SHOW FULL BOTTLE */
+  height: 320px;
+  border-radius: 16px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   margin-bottom: 16px;
 }
 
-/* TEXT */
+/* IMAGE */
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+
+  transition: transform 0.45s ease;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.15));
+}
+
+/* HOVER ZOOM */
+.nation-card:hover .product-img-box img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   TEXT
+========================= */
 .nation-card h4 {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
@@ -219,93 +188,8 @@ body {
 }
 
 /* =========================
-   WHOLESALE CTA FIX
+   WHOLESALE CTA (FIXED)
 ========================= */
-
-.brand-cta p {
-  max-width: 560px;   /* DESKTOP READABILITY FIX */
-  margin: 0 auto 24px;
-  line-height: 1.7;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  background: #f9f8f6;
-  padding: 50px 20px 20px;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
-}
-
-.footer-brand h4 {
-  font-family: 'Playfair Display', serif;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-}
-
-.footer-links a {
-  display: block;
-  font-size: 13px;
-  color: #555;
-  margin-top: 6px;
-  text-decoration: none;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 12px;
-  color: #777;
-  margin-top: 30px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 768px) {
-
-  .header-inner {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .hero-left,
-  .hero-right {
-    display: none;
-  }
-
-  .brands-products {
-    padding-top: 80px;
-  }
-
-  .nation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .nation-card img {
-    height: 260px;     /* Mobile perfect */
-  }
-
-}
-
-/* =============================
-   DESKTOP FIX – WHOLESALE CTA
-============================= */
-
 .brand-cta {
   width: 100%;
   background: #000;
@@ -349,111 +233,64 @@ body {
   background: #f1f1f1;
 }
 
-/* =============================
-   PRODUCT CARD FINAL FIX
-============================= */
-
-.nation-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 24px 20px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  height: 100%;
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #f9f8f6;
+  padding: 50px 20px 20px;
 }
 
-/* IMAGE WRAPPER FIX */
-.nation-card img {
-  width: 100%;
-  height: 320px;          /* SAME HEIGHT FOR ALL */
-  object-fit: contain;   /* SHOW FULL BOTTLE */
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.footer-links a {
   display: block;
-  margin: 0 auto 16px;
-}
-
-/* TITLE */
-.nation-card h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-/* DESCRIPTION */
-.nation-card p {
-  font-size: 14px;
+  font-size: 13px;
   color: #555;
-  line-height: 1.5;
+  margin-top: 6px;
+  text-decoration: none;
 }
 
-/* GRID HEIGHT CONSISTENCY */
-.nation-grid {
-  align-items: stretch;
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 30px;
 }
 
-/* MOBILE ADJUSTMENT */
+/* =========================
+   MOBILE FIX
+========================= */
 @media (max-width: 768px) {
-  .nation-card img {
+
+  .nation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brands-products {
+    padding-top: 80px;
+  }
+
+  .product-img-box {
     height: 240px;
   }
-}
 
-
-/* =============================
-   PRODUCT CARD – FINAL STABLE FIX
-============================= */
-
-.nation-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 22px 18px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* IMAGE – DESKTOP */
-.nation-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 14px;
-}
-
-/* TEXT */
-.nation-card h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.nation-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.4;
-}
-
-/* =============================
-   MOBILE FIX (IMPORTANT)
-============================= */
-@media (max-width: 768px) {
-
-  .nation-card {
-    padding: 18px 16px;
+  .brand-cta h3 {
+    font-size: 26px;
   }
 
-  .nation-card img {
-    height: 220px;      /* 🔥 FIXED FOR PHONE */
-    margin-bottom: 12px;
+  .brand-cta p {
+    font-size: 15px;
   }
-}
-
-
+   }
