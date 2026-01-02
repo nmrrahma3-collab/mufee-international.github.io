@@ -222,22 +222,28 @@ body {
    BRAND STORY
 ========================= */
 .brand-story {
-  padding: 90px 20px;
   text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.brand-story p {
-  max-width: 900px;
-  margin: auto;
-  font-size: 16px;
+/* Heading */
+.brand-story h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+/* Typing Text */
+#typing-text {
+  max-width: 750px;   /* Center block width */
+  margin: 0 auto;     /* Center on page */
+  font-size: 18px;
   line-height: 1.9;
-  color: #444;
-}
-
-.brand-story blockquote {
-  margin-top: 30px;
-  font-size: 20px;
-  font-style: italic;
+  color: #333;
+  text-align: center; /* Make lines centered */
+  display: block;
 }
 
 /* =========================
