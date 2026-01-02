@@ -1,172 +1,340 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+  background: #f6f4f2;
   color: #222;
-  line-height: 1.7;
-}
-
-/* ================= CONTAINER ================= */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
 }
 
 /* ================= HEADER ================= */
 .header {
-  background: #000;
-  padding: 15px 0;
+  background: #f9f8f6;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 18px 0;
 }
 
-.header-flex {
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-right: 50px;
 }
 
+/* NAV */
 .nav a {
-  color: #fff;
-  margin-left: 20px;
+  padding: 8px 16px;
+  margin: 0 6px;
+  font-size: 14px;
+  color: #333;
   text-decoration: none;
-  font-size: 15px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
 }
 
-.nav a.active,
 .nav a:hover {
-  color: #f1c40f;
+  background: rgba(0, 0, 0, 0.06);
 }
 
-/* ================= HERO (SAME DESIGN) ================= */
-.hero {
-  height: 70vh;
-  background: url("hero.jpg") center / cover no-repeat;
-  position: relative;
-}
-
-.hero-overlay {
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.nav a.active {
+  background: #000;
   color: #fff;
 }
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+/* WhatsApp Button */
+.header-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
 }
 
-.hero p {
-  font-size: 18px;
-  letter-spacing: 1px;
+.header-whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
 }
 
-/* ================= DISTRIBUTION CONTENT ================= */
-.content {
-  padding: 70px 0;
+/* ================= HERO ================= */
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
 }
 
-.content h2 {
-  font-size: 34px;
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left img,
+.hero-right img {
+  width: 320px;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+.hero-center {
+  text-align: center;
+  max-width: 520px;
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.hero-center h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+}
+
+.hero-center h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.hero-center p {
+  color: #555;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.intro {
-  font-size: 16px;
-  max-width: 900px;
-  margin-bottom: 45px;
+.hero-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
 }
 
-/* SECTION BLOCKS */
-.section {
+.btn-dark {
+  background: #000;
+  color: #fff;
+}
+
+.btn-light {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.hero-checks {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #555;
+}
+
+.hero-checks span {
+  margin: 0 6px;
+}
+
+/* HERO ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  text-align: center;
   margin-bottom: 40px;
 }
 
-.section h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+/* ================= DISTRIBUTION PAGE ================= */
+.distribution {
+  padding: 80px 6%;
 }
 
-.section p {
-  margin-bottom: 10px;
-  color: #444;
+.distribution-wrapper {
+  max-width: 1100px;
+  margin: auto;
 }
 
-.section ul {
-  padding-left: 22px;
-}
-
-.section ul li {
-  margin-bottom: 8px;
-}
-
-/* ================= CTA ================= */
-.cta {
-  background: #f4f4f4;
-  padding: 35px;
+.distribution-block {
   text-align: center;
-  border-radius: 6px;
+  margin-bottom: 50px;
 }
 
-.cta h3 {
-  font-size: 24px;
+.distribution-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.distribution-block p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.distribution-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.distribution-block ul li {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+/* GRID */
+.distribution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+.distribution-card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.distribution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.distribution-card h4 {
+  font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
-}
-
-.cta p {
-  margin-bottom: 15px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 32px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.btn:hover {
-  background: #333;
 }
 
 /* ================= FOOTER ================= */
 .footer {
-  background: #000;
-  color: #fff;
+  background: #f9f8f6;
+  padding: 50px 20px 20px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.06);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.footer-brand h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.footer-links a {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
+  font-size: 12px;
+  color: #777;
+  margin-top: 30px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= SCROLL REVEAL ================= */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 30px;
+
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .nav a {
-    margin-left: 10px;
-    font-size: 14px;
+  .logo {
+    font-size: 18px;
+    margin: 0;
   }
 
-  .content h2 {
-    font-size: 26px;
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
-}
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .hero-left,
+  .hero-right {
+    display: none;
+  }
+
+  .hero-center h1 {
+    font-size: 34px;
+  }
+
+  .hero-center h2 {
+    font-size: 20px;
+  }
+
+  .distribution-grid {
+    grid-template-columns: 1fr;
+  }
+  }
