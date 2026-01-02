@@ -1,219 +1,225 @@
-/* ================= GLOBAL ================= */
+/* ==============================
+   GENERAL RESET & FONTS
+============================== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  background: #fff;
-  color: #333;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  color: #222;
+  background-color: #fff;
 }
 
-/* ================= HEADER ================= */
+/* ==============================
+   HEADER
+============================== */
 .header {
   width: 100%;
+  padding: 20px 40px;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .header-inner {
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  max-width: 1300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 1px;
+.header .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111;
 }
 
 .nav a {
-  margin-left: 25px;
+  margin: 0 15px;
   text-decoration: none;
-  color: #333;
+  color: #111;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.nav a:hover,
-.nav a.active {
-  color: #000;
+.nav a.active,
+.nav a:hover {
+  color: #0070f3;
 }
 
 .header-whatsapp-btn {
-  background: #25D366;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #25D366;
   color: #fff;
   padding: 8px 15px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .header-whatsapp-btn:hover {
-  opacity: 0.85;
+  transform: scale(1.05);
 }
 
-/* ================= HERO ================= */
+/* ==============================
+   HERO SECTION
+============================== */
 .hero {
   width: 100%;
-  min-height: 450px;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-size: cover;
   background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 60px 20px;
 }
 
 .hero-content {
-  max-width: 1200px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
   flex-wrap: wrap;
 }
 
 .hero-left,
 .hero-right {
   flex: 1 1 250px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-left img,
 .hero-right img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .hero-center {
-  flex: 1 1 400px;
+  flex: 2 1 400px;
   text-align: center;
+  padding: 20px;
 }
 
 .hero-center h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 3rem;
+  color: #111;
 }
 
 .hero-center h2 {
-  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #000; /* Black text as requested */
   margin: 15px 0;
 }
 
 .hero-center p {
-  font-size: 16px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
-.hero-buttons button {
-  margin: 5px;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+.btn-dark,
+.btn-light {
+  padding: 10px 25px;
   border-radius: 5px;
   font-weight: 500;
-  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 .btn-dark {
-  background: #000;
+  background-color: #111;
   color: #fff;
 }
 
 .btn-dark:hover {
-  opacity: 0.8;
+  background-color: #333;
 }
 
 .btn-light {
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #111;
 }
 
 .btn-light:hover {
-  background: #000;
-  color: #fff;
+  background-color: #f5f5f5;
+}
+
+.hero-checks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .hero-checks span {
-  display: inline-block;
-  margin: 5px 10px;
-  font-weight: 500;
-}
-
-/* ================= MIDDLE IMAGES ================= */
-.middle-images {
-  max-width: 1200px;
-  margin: 50px auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  text-align: center;
-}
-
-.distribution-card {
-  flex: 1 1 30%;
-  background: #f9f9f9;
+  background: #f5f5f5;
+  padding: 5px 12px;
   border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.distribution-card img {
-  width: 100%;
-  display: block;
-  border-bottom: 1px solid #eee;
-  transition: transform 0.4s ease;
-}
-
-.distribution-card:hover img {
-  transform: scale(1.1);
-}
-
-.distribution-card p {
-  padding: 15px;
-  font-weight: 500;
-}
-
-/* ================= PARTNER SECTION ================= */
-.distribution-lines {
-  max-width: 900px;
-  margin: 60px auto;
+/* ==============================
+   DISTRIBUTION SECTION PLACEHOLDER
+============================== */
+.distribution-section {
+  padding: 60px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.partner-heading {
+.distribution-section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 2.2rem;
   margin-bottom: 20px;
-  font-weight: 600;
-  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-.distribution-lines p {
-  font-size: 18px;
-  margin: 12px 0;
-  line-height: 1.5;
-  color: #333;
+.distribution-section p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ================= FOOTER ================= */
+/* ==============================
+   FOOTER
+============================== */
 .footer {
   background: #111;
   color: #fff;
@@ -221,89 +227,105 @@ body {
 }
 
 .footer-inner {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 30px;
 }
 
 .footer-brand h4 {
-  font-size: 20px;
-  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .footer-brand p {
-  margin-top: 5px;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 .footer-links div {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links div strong {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .footer-links a {
-  display: block;
-  color: #fff;
   text-decoration: none;
-  margin: 5px 0;
-  transition: 0.3s;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #25D366;
+  color: #fff;
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #aaa;
+  font-size: 0.85rem;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #999;
 }
 
-/* ================= FADE UP ANIMATION ================= */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= RESPONSIVE ================= */
-@media screen and (max-width: 1024px) {
+/* ==============================
+   MEDIA QUERIES
+============================== */
+@media (max-width: 1024px) {
   .hero-content {
     flex-direction: column;
+  }
+
+  .hero-center {
     text-align: center;
   }
-  .hero-left, .hero-right {
+
+  .hero-left,
+  .hero-right {
     margin-bottom: 20px;
-  }
-  .middle-images {
-    flex-direction: column;
-    align-items: center;
-  }
-  .distribution-card {
-    flex: 1 1 80%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
   }
-  .hero h2 {
-    font-size: 20px;
+
+  .hero-center h1 {
+    font-size: 2.5rem;
   }
+
+  .hero-center h2 {
+    font-size: 1.7rem;
+  }
+
   .hero-center p {
-    font-size: 14px;
+    font-size: 1rem;
   }
-  .distribution-card {
-    flex: 1 1 90%;
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-left img,
+  .hero-right img {
+    max-width: 80%;
   }
 }
+
+/* ==============================
+   FADE-IN ANIMATION
+============================== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+  }
