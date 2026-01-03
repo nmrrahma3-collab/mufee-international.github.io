@@ -1,573 +1,302 @@
-
-
-
-.header-whatsapp-btn:hover {
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =========================
+   GLOBAL
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
+body{
   font-family: 'Inter', sans-serif;
-  background: #f6f4f2;
-  color: #222;
+  background:#f6f4f2;
+  color:#222;
 }
 
-/* HEADER */
-.header {
-  background: #f9f8f6;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 18px 0;
+/* =========================
+   HEADER (same as home)
+========================= */
+
+.header{
+  background:#f9f8f6;
+  border-bottom:1px solid #e5e3df;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
 }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  letter-spacing: 2px;
-  margin-right: 50px;   /* ✅ SPACE AFTER MUFEE INTERNATIONAL */
+.logo{
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
-  
-/* Oval Menu Items */
-.nav a {
-  padding: 8px 16px;
-  margin: 0 6px;
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-  border-radius: 999px; /* oval shape */
-  transition: all 0.25s ease;
+.nav a{
+  margin:0 8px;
+  text-decoration:none;
+  color:#333;
 }
 
-/* Hover effect */
-.nav a:hover {
-  background: rgba(0, 0, 0, 0.06);
+.nav .active{
+  font-weight:600;
 }
 
-/* Active menu */
-.nav a.active {
-  background: #000;
-  color: #fff;
-}
-  
-
-/* Header WhatsApp Button */
-.header-whatsapp-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+/* WhatsApp Button */
+.header-whatsapp-btn{
+  background:#25D366;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:50px;
+  display:flex;
+  gap:6px;
+  align-items:center;
+  text-decoration:none;
 }
 
-.header-whatsapp-btn svg {
-  width: 20px;
-  height: 20px;
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  background-size:cover;
+  background-position:center;
+  padding:80px 0;
 }
 
-.header-whatsapp-btn:hover {
-  background: #1ebe5d;
-  transform: translateY(-2px);
-}
-
-
-
-/* HERO */
-.hero {
-  background-size: cover;
-  background-position: center;
-  padding: 80px 0;
-}
-
-.hero-content {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.hero-content{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .hero-left img,
-.hero-right img {
-  width: 320px;
+.hero-right img{
+  width:220px;
 }
 
-.hero-center {
-  text-align: center;
-  max-width: 520px;
+.hero-center{
+  text-align:center;
 }
 
-.hero-center h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
+.hero-center h1{
+  font-family:'Playfair Display', serif;
+  font-size:50px;
 }
 
-.hero-center h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin: 10px 0;
+.hero-center h2{
+  font-size:22px;
+  margin-top:8px;
+  font-weight:500;
 }
-
-.hero-center p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.hero-buttons button {
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-dark {
-  background: #000;
-  color: #fff;
-}
-
-.btn-light {
-  background: #fff;
-  border: 1px solid #ccc;
-}
-
-.hero-checks {
-  margin-top: 15px;
-  font-size: 13px;
-  color: #555;
-}
-
-.hero-checks span {
-  margin: 0 6px;
-   }
-   
 
 /* =========================
    SECTION TITLE
 ========================= */
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  text-align: center;
-  margin-bottom: 20px;
+
+.section-title{
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  margin-top:60px;
+  margin-bottom:20px;
 }
 
 /* =========================
-   PRODUCTS SECTION
+   PRODUCT GRID
 ========================= */
-.brands-products {
-  padding-top: 110px;
-  padding-bottom: 80px;
+
+.products{
+  max-width:1100px;
+  margin:20px auto 60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:18px;
 }
 
-.brand-line {
-  max-width: 720px;
-  margin: 0 auto 60px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
+/* CARD */
+
+.product-card{
+  background:white;
+  border-radius:18px;
+  padding:14px;
+  text-align:center;
+  border:1px solid #e6e3df;
+  cursor:pointer;
+  transition:transform .3s ease, box-shadow .3s ease;
 }
 
-/* GRID */
-.nation-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 1150px;
-  margin: auto;
-  align-items: stretch;
+/* Apple hover feel */
+.product-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+/* IMAGE BOX */
+
+.product-img-box{
+  width:100%;
+  height:240px;
+  border-radius:16px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#faf8f6;
+}
+
+.product-img-box img{
+  width:90%;
+  height:90%;
+  object-fit:contain;
+  transition:transform .4s ease;
+}
+
+/* Hover zoom */
+
+.product-card:hover img{
+  transform:scale(1.05);
+}
+
+/* Product text */
+
+.product-card h4{
+  margin-top:10px;
+  font-size:15px;
+  font-weight:600;
+}
+
+.product-card p{
+  font-size:13px;
+  color:#666;
 }
 
 /* =========================
-   PRODUCT CARD (FIXED)
+   POPUP MODAL IMAGE
 ========================= */
-.nation-card {
-  background: #fff;
-  border-radius: 22px;
-  padding: 22px;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.1);
-  text-align: center;
 
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+.image-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:500;
 }
 
-.nation-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 45px rgba(0,0,0,0.18);
-}
-
-/* IMAGE BOX (KEY FIX) */
-.product-img-box {
-  width: 100%;
-  height: 380px;              /* DESKTOP HEIGHT */
-  border-radius: 18px;
-  overflow: hidden;
-  background: #f3f3f3;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.product-img-box img {
-  width: 100%;
-  height: 150%;
-  object-fit: contain;        /* FULL BOTTLE */
-  transition: transform 0.4s ease;
-}
-
-.nation-card:hover img {
-  transform: scale(1.05);
-}
-
-/* TEXT */
-.nation-card h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.nation-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
+.image-modal img{
+  width:90%;
+  max-width:420px;
+  border-radius:20px;
 }
 
 /* =========================
    BRAND STORY
 ========================= */
-.brand-story {
-  text-align: center;
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.brand-story{
+  max-width:850px;
+  margin:70px auto;
+  text-align:center;
 }
 
-/* Heading */
-.brand-story h2 {
-  font-size: 34px;
-  margin-bottom: 25px;
+.brand-story h2{
+  font-family:'Playfair Display', serif;
+  font-size:30px;
+  margin-bottom:14px;
 }
 
-/* Typing Text */
-#typing-text {
-  max-width: 750px;   /* Center block width */
-  margin: 0 auto;     /* Center on page */
-  font-size: 18px;
-  line-height: 1.9;
-  color: #333;
-  text-align: center; /* Make lines centered */
-  display: block;
+/* typing line centered */
+
+.story-line{
+  font-size:16px;
+  font-style:italic;
+  min-height:28px;
 }
 
 /* =========================
    WHOLESALE CTA
 ========================= */
-.brand-cta {
-  background: #000;
-  color: #fff;
-  padding: 90px 20px;
-  text-align: center;
+
+.brand-cta{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:55px 12px;
 }
 
-.brand-cta h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 18px;
-}
-
-.brand-cta p {
-  max-width: 560px;
-  margin: 0 auto 26px;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.brand-cta a {
-  display: inline-block;
-  padding: 14px 36px;
-  border-radius: 30px;
-  background: #fff;
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.brand-cta a:hover {
-  transform: translateY(-2px);
-  background: #f1f1f1;
+.brand-cta h3{
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  margin-bottom:10px;
 }
 
 /* =========================
    FOOTER
 ========================= */
-.footer {
-  background: #f9f8f6;
-  padding: 50px 20px 20px;
-}
 
-.footer-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
-}
-
-.footer-brand h4 {
-  font-family: 'Playfair Display', serif;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-}
-
-.footer-links a {
-  display: block;
-  font-size: 13px;
-  color: #555;
-  margin-top: 6px;
-  text-decoration: none;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 12px;
-  color: #777;
-  margin-top: 30px;
+footer{
+  background:#f1efec;
+  padding:35px 12px;
+  text-align:center;
+  border-top:1px solid #dedcd8;
 }
 
 /* =========================
-   FADE-UP ANIMATION
+   FADE UP ANIMATION
 ========================= */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.9s ease forwards;
+
+.fade-up{
+  opacity:0;
+  transform:translateY(25px);
+  transition:0.6s ease;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* =========================
-   MOBILE FIX (IMPORTANT)
-========================= */
-@media (max-width: 768px) {
-
-  .hero-content {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .hero-left,
-  .hero-right {
-    display: none;
-  }
-
-  .brands-products {
-    padding-top: 80px;
-  }
-
-  .nation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* PHONE IMAGE FIX */
-  .product-img-box {
-    height: 300px;     /* 🔥 BIGGER PHONE IMAGE */
-  }
-
-  .brand-line {
-    padding: 0 16px;
-    font-size: 15px;
-  }
-   }
-/* ===============================
-   FADE-UP SHOW STATE
-=============================== */
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===============================
-   IMAGE MODAL POPUP
-=============================== */
-.image-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
-}
-
-.image-modal.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.image-modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 20px;
-  background: #fff;
-  padding: 20px;
-}
-
-.close-modal {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 36px;
-  color: #fff;
-  cursor: pointer;
-     }
-/* Typing animation text style */
-#typing-text {
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  line-height: 1.8;
-  color: #333;
-  text-align: center;
-  min-height: 120px; /* prevents page jump */
-}
-
-#typing-heading {
-  display: inline-block;
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  letter-spacing: 1px;
-  color: #111;
-  min-height: 44px;
-}
-
-/* ===== FADE IN EFFECT ===== */
-.fade-in {
-  opacity: 0;
-  animation: fadeInSmooth 0.8s ease forwards;
-}
-
-@keyframes fadeInSmooth {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Keep story area stable */
-#typing-heading,
-#typing-text {
-  min-height: 44px;
-  display: inline-block;
-}
-
-/* ===== BRAND STORY TYPING ===== */
-#typing-lines p {
-  font-size: 17px;
-  line-height: 1.9;
-  margin: 14px 0;
-  color: #444;
-}
-
-/* Fade-in animation */
-.fade-in {
-  opacity: 0;
-  animation: fadeInSmooth 0.8s ease forwards;
-}
-
-@keyframes fadeInSmooth {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   BRAND STORY – LUXURY FONT
+   RESPONSIVE
 ========================= */
 
-/* Story section font */
-.brand-story {
-  font-family: 'Cormorant Garamond', serif;
+@media(max-width:800px){
+
+  .hero-content{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-left img,
+  .hero-right img{
+    width:160px;
+  }
+
+  .product-img-box{
+    height:210px;
+  }
 }
 
-/* Story heading stays premium */
-.brand-story .section-title {
-  font-family: 'Playfair Display', serif;
-}
+@media(max-width:480px){
 
-/* Typing lines text */
-#typing-lines p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  line-height: 1.9;
-  letter-spacing: 0.4px;
-  color: #333;
-  text-align: center;
-}
+  .product-img-box{
+    height:190px;
+  }
 
-/* =========================
-   APPLE SMOOTH MOTION
-========================= */
-.fade-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Subtle hover (no layout break) */
-.nation-card:hover {
-  transform: translateY(-6px) scale(1.01);
-}
+  .hero-center h1{
+    font-size:36px;
+  }
+  }
